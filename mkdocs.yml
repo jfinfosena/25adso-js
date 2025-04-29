@@ -57,12 +57,11 @@ copyright: 2025 &copy; by JFVG
 nav:
   - Inicio: index.md  
   - Contenido:
-      - content/p0.md
+      - content/p0.md      
       
 
   - Proyecto Integrador: 
-      - pi/p1.md
-      - pi/curso.md
+      - pi/p1.md   
   - Blog:
      - blog/index.md
   - Acerca de: about.md
