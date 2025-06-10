@@ -198,3 +198,157 @@ A continuación, se proporciona una solución de referencia para todas las tarea
 3. ¿Qué sucede si intentas eliminar un elemento de una lista vacía sin validar? ¿Cómo lo manejaste en la Tarea 4?
 4. ¿Cómo podrías mejorar esta actividad para que los nuevos elementos añadidos en la Tarea 3 tengan estilos dinámicos?
 
+## Solución actividad 2
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Divisas</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        .converter {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 500px;
+            width: 90%;
+            transition: transform 0.3s ease;
+        }
+        .converter:hover {
+            transform: translateY(-5px);
+        }
+        h2 {
+            color: #1e3a8a;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            text-align: center;
+        }
+        .input-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        input, select {
+            padding: 12px;
+            font-size: 1em;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        input:focus, select:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        input {
+            width: 120px;
+        }
+        select {
+            width: 150px;
+            background: #f9fafb;
+        }
+        button {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1em;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background: #2563eb;
+            transform: scale(1.05);
+        }
+        button:active {
+            transform: scale(0.95);
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #1e3a8a;
+            font-weight: bold;
+            text-align: center;
+        }
+        @media (max-width: 480px) {
+            .converter {
+                padding: 20px;
+            }
+            input, select {
+                width: 100%;
+            }
+            .input-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="converter">
+        <h2>Conversor de Divisas</h2>
+        <div class="input-group">
+            <input type="number" id="amount" placeholder="Cantidad" min="0">
+            <select id="fromCurrency">
+                <option value="COP">Pesos Colombianos (COP)</option>
+                <option value="USD">Dólares (USD)</option>
+                <option value="EUR">Euros (EUR)</option>
+            </select>
+            <span>a</span>
+            <select id="toCurrency">
+                <option value="COP">Pesos Colombianos (COP)</option>
+                <option value="USD">Dólares (USD)</option>
+                <option value="EUR">Euros (EUR)</option>
+            </select>
+        </div>
+        <button onclick="convert()">Convertir</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        // Tasas de cambio fijas (actualizar según tasas reales)
+        const exchangeRates = {
+            COP: { USD: 0.00024, EUR: 0.00022 },
+            USD: { COP: 4200, EUR: 0.93 },
+            EUR: { COP: 4500, USD: 1.08 }
+        };
+
+        function convert() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const fromCurrency = document.getElementById('fromCurrency').value;
+            const toCurrency = document.getElementById('toCurrency').value;
+            const resultDiv = document.getElementById('result');
+
+            if (isNaN(amount) || amount <= 0) {
+                resultDiv.innerHTML = "Por favor, ingrese una cantidad válida.";
+                return;
+            }
+
+            if (fromCurrency === toCurrency) {
+                resultDiv.innerHTML = `Resultado: ${amount.toFixed(2)} ${toCurrency}`;
+                return;
+            }
+
+            const rate = exchangeRates[fromCurrency][toCurrency];
+            const convertedAmount = amount * rate;
+            resultDiv.innerHTML = `Resultado: ${convertedAmount.toFixed(2)} ${toCurrency}`;
+        }
+    </script>
+</body>
+</html>
+```
