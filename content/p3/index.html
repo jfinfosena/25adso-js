@@ -1,0 +1,1870 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="jhonfvg">
+      
+      
+        <link rel="canonical" href="https://jfinfosena.github.io/25adso-js/content/p3/">
+      
+      
+        <link rel="prev" href="../p2/">
+      
+      
+        <link rel="next" href="../p4/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>Funciones en JavaScript - JavaScript</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#funciones-en-javascript" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="JavaScript" class="md-header__button md-logo" aria-label="JavaScript" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            JavaScript
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Funciones en JavaScript
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../p0/" class="md-tabs__link">
+          
+  
+    
+  
+  Contenido
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../pi/p1/" class="md-tabs__link">
+          
+  
+    
+  
+  Proyecto Integrador
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+    
+  
+  Acerca de
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="JavaScript" class="md-nav__button md-logo" aria-label="JavaScript" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg>
+
+    </a>
+    JavaScript
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Contenido
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Contenido
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción a JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tipos de datos y operadores básicos en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructuras Condicionales, Bucles e Iteraciones en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Funciones en JavaScript
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Funciones en JavaScript
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-declaracion-de-funciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Declaración de funciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Declaración de funciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-declaracion-de-funcion-function-declaration" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Declaración de función (Function Declaration)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-expresion-de-funcion-function-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Expresión de función (Function Expression)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-arrow-functions-funciones-flecha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. Arrow Functions (Funciones Flecha)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-funciones-constructoras-function-constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4. Funciones Constructoras (Function Constructor)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-funciones-autoinvocadas-iife-immediately-invoked-function-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5. Funciones Autoinvocadas (IIFE - Immediately Invoked Function Expression)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-metodos-en-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6. Métodos en Objetos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-parametros" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Parámetros
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Parámetros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-valores-por-defecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Valores por Defecto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-rest-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. Rest Parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-retorno-de-valores-y-ambito-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Retorno de Valores y Ámbito (Scope)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Retorno de Valores y Ámbito (Scope)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-retorno-de-valores" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Retorno de Valores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-ambito-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Ámbito (Scope)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-llamadas-a-funciones-y-reutilizacion-de-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Llamadas a Funciones y Reutilización de Código
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Llamadas a Funciones y Reutilización de Código">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-llamadas-a-funciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Llamadas a Funciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-reutilizacion-de-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Reutilización de Código
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividad-20-ejercicios-sobre-funciones-en-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actividad: 20 Ejercicios sobre Funciones en JavaScript
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actividad: 20 Ejercicios sobre Funciones en JavaScript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instrucciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instrucciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios Básicos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios-intermedios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios Intermedios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios-avanzados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios Avanzados
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arreglos en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guía Completa del DOM en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Métodos Asíncronos y Fetch en JavaScript con Mockoon Playground
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tutorial Completo sobre Eventos en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tutorial Completo sobre Local Storage, Session Storage y Cookies en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actividad Grupal: Consumo de API RESTful con HTML, CSS y JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actividad Grupal: Creación y Consumo de API con MockAPI.io, HTML, CSS y JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Proyecto Integrador
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Proyecto Integrador
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pi/p1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción Proyecto Integrador
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../blog/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archivo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acerca de
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-declaracion-de-funciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Declaración de funciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Declaración de funciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-declaracion-de-funcion-function-declaration" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Declaración de función (Function Declaration)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-expresion-de-funcion-function-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Expresión de función (Function Expression)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-arrow-functions-funciones-flecha" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. Arrow Functions (Funciones Flecha)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-funciones-constructoras-function-constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4. Funciones Constructoras (Function Constructor)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-funciones-autoinvocadas-iife-immediately-invoked-function-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5. Funciones Autoinvocadas (IIFE - Immediately Invoked Function Expression)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-metodos-en-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6. Métodos en Objetos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-parametros" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Parámetros
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Parámetros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-valores-por-defecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Valores por Defecto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-rest-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. Rest Parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-retorno-de-valores-y-ambito-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Retorno de Valores y Ámbito (Scope)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Retorno de Valores y Ámbito (Scope)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-retorno-de-valores" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Retorno de Valores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-ambito-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Ámbito (Scope)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-llamadas-a-funciones-y-reutilizacion-de-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Llamadas a Funciones y Reutilización de Código
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Llamadas a Funciones y Reutilización de Código">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-llamadas-a-funciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Llamadas a Funciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-reutilizacion-de-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Reutilización de Código
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividad-20-ejercicios-sobre-funciones-en-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actividad: 20 Ejercicios sobre Funciones en JavaScript
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actividad: 20 Ejercicios sobre Funciones en JavaScript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instrucciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instrucciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios Básicos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios-intermedios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios Intermedios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios-avanzados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios Avanzados
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="funciones-en-javascript"><strong>Funciones en JavaScript</strong></h1>
+<hr />
+<h2 id="1-declaracion-de-funciones"><strong>1. Declaración de funciones</strong></h2>
+<p>Las funciones en JavaScript son bloques de código diseñados para realizar una tarea específica y que pueden ser reutilizados. Existen varias formas de declarar funciones, cada una con características específicas.</p>
+<h3 id="11-declaracion-de-funcion-function-declaration"><strong>1.1. Declaración de función (Function Declaration)</strong></h3>
+<p>La declaración de función es la forma más tradicional de definir una función en JavaScript. Se utiliza la palabra clave <code>function</code>, seguida del nombre de la función, parámetros entre paréntesis y un bloque de código entre llaves <code>{}</code>.</p>
+<p><strong>Características:</strong></p>
+<ul>
+<li>Las declaraciones de funciones son <strong>hoisted</strong> (elevadas), lo que significa que pueden ser llamadas antes de su definición en el código.</li>
+<li>Son ideales para funciones reutilizables que se usarán en múltiples partes del programa.</li>
+</ul>
+<p><strong>Sintaxis:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">nombreDeLaFuncion</span><span class="p">(</span><span class="nx">parametro1</span><span class="p">,</span><span class="w"> </span><span class="nx">parametro2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Código a ejecutar</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">valor</span><span class="p">;</span><span class="w"> </span><span class="c1">// Opcional</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Ejemplo:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">saludar</span><span class="p">(</span><span class="nx">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="sb">`¡Hola, </span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">!`</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">saludar</span><span class="p">(</span><span class="s2">&quot;Ana&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// Imprime: ¡Hola, Ana!</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">saludar</span><span class="p">(</span><span class="s2">&quot;Juan&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// Imprime: ¡Hola, Juan!</span>
+</code></pre></div></p>
+<p><strong>Hoisting en acción:</strong>
+<div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sumar</span><span class="p">(</span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">));</span><span class="w"> </span><span class="c1">// Imprime: 8 (funciona aunque la función esté definida después)</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">sumar</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="12-expresion-de-funcion-function-expression"><strong>1.2. Expresión de función (Function Expression)</strong></h3>
+<p>Una expresión de función define una función dentro de una expresión, generalmente asignándola a una variable. A diferencia de las declaraciones de funciones, las expresiones no son hoisted, por lo que no pueden ser llamadas antes de su definición.</p>
+<p><strong>Características:</strong></p>
+<ul>
+<li>Pueden ser anónimas (sin nombre) o nombradas.</li>
+<li>Útiles cuando se desea asignar una función a una variable o pasarla como argumento.</li>
+</ul>
+<p><strong>Sintaxis:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">nombreDeLaFuncion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">parametro1</span><span class="p">,</span><span class="w"> </span><span class="nx">parametro2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Código a ejecutar</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">valor</span><span class="p">;</span><span class="w"> </span><span class="c1">// Opcional</span>
+<span class="p">};</span>
+</code></pre></div></p>
+<p><strong>Ejemplo (anónima):</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">multiplicar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">multiplicar</span><span class="p">(</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">));</span><span class="w"> </span><span class="c1">// Imprime: 20</span>
+<span class="c1">// console.log(multiplicar(2, 3)); // Error si se llama antes de la definición</span>
+</code></pre></div></p>
+<p><strong>Ejemplo (nombrada):</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">factorial</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">calcularFactorial</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">n</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">calcularFactorial</span><span class="p">(</span><span class="nx">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// La función nombrada permite recursión</span>
+<span class="p">};</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">factorial</span><span class="p">(</span><span class="mf">5</span><span class="p">));</span><span class="w"> </span><span class="c1">// Imprime: 120 (5 * 4 * 3 * 2 * 1)</span>
+</code></pre></div></p>
+<h3 id="13-arrow-functions-funciones-flecha"><strong>1.3. Arrow Functions (Funciones Flecha)</strong></h3>
+<p>Introducidas en ES6 (2015), las arrow functions son una sintaxis más concisa para definir funciones. Son siempre anónimas y tienen un comportamiento especial con el ámbito de <code>this</code>.</p>
+<p><strong>Características:</strong></p>
+<ul>
+<li>Sintaxis más corta.</li>
+<li>No tienen su propio <code>this</code>, heredan el <code>this</code> del contexto en el que fueron definidas.</li>
+<li>No son hoisted.</li>
+<li>Ideales para funciones cortas o callbacks.</li>
+</ul>
+<p><strong>Sintaxis:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">nombreDeLaFuncion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">parametro1</span><span class="p">,</span><span class="w"> </span><span class="nx">parametro2</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Código a ejecutar</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">valor</span><span class="p">;</span><span class="w"> </span><span class="c1">// Opcional</span>
+<span class="p">};</span>
+</code></pre></div></p>
+<p><strong>Ejemplo básico:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">restar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">restar</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">));</span><span class="w"> </span><span class="c1">// Imprime: 6</span>
+</code></pre></div></p>
+<p><strong>Sintaxis abreviada (retorno implícito):</strong>
+Si la función tiene una sola expresión, se puede omitir las llaves y la palabra <code>return</code>:
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">sumar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sumar</span><span class="p">(</span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">7</span><span class="p">));</span><span class="w"> </span><span class="c1">// Imprime: 10</span>
+</code></pre></div></p>
+<p><strong>Con un solo parámetro:</strong>
+Si hay un solo parámetro, se pueden omitir los paréntesis:
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">cuadrado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">x</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">cuadrado</span><span class="p">(</span><span class="mf">5</span><span class="p">));</span><span class="w"> </span><span class="c1">// Imprime: 25</span>
+</code></pre></div></p>
+<p><strong>Sin parámetros:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">saludar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="s2">&quot;¡Hola, mundo!&quot;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">saludar</span><span class="p">());</span><span class="w"> </span><span class="c1">// Imprime: ¡Hola, mundo!</span>
+</code></pre></div></p>
+<p><strong>Diferencia con <code>this</code>:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">objeto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">saludar</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime: Ana</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">saludarFlecha</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime: undefined (hereda this del ámbito global)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">objeto</span><span class="p">.</span><span class="nx">saludar</span><span class="p">();</span>
+<span class="nx">objeto</span><span class="p">.</span><span class="nx">saludarFlecha</span><span class="p">();</span>
+</code></pre></div></p>
+<h3 id="14-funciones-constructoras-function-constructor"><strong>1.4. Funciones Constructoras (Function Constructor)</strong></h3>
+<p>Aunque menos comunes, las funciones constructoras se usan para crear objetos mediante el operador <code>new</code>. No son recomendadas en el JavaScript moderno (se prefieren clases de ES6).</p>
+<p><strong>Ejemplo:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">Persona</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nombre</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">edad</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">persona1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Persona</span><span class="p">(</span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">persona1</span><span class="p">.</span><span class="nx">nombre</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime: Ana</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">persona1</span><span class="p">.</span><span class="nx">edad</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime: 30</span>
+</code></pre></div></p>
+<h3 id="15-funciones-autoinvocadas-iife-immediately-invoked-function-expression"><strong>1.5. Funciones Autoinvocadas (IIFE - Immediately Invoked Function Expression)</strong></h3>
+<p>Una IIFE es una función que se define y ejecuta inmediatamente. Es útil para evitar la contaminación del ámbito global.</p>
+<p><strong>Sintaxis:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Código a ejecutar</span>
+<span class="p">})();</span>
+</code></pre></div></p>
+<p><strong>Ejemplo:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;¡Soy una IIFE!&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mensaje</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime: ¡Soy una IIFE!</span>
+<span class="p">})();</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">mensaje</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime: undefined (mensaje no está en el ámbito global)</span>
+</code></pre></div></p>
+<p><strong>Con parámetros:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Hola, </span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime: Hola, Juan</span>
+<span class="p">})(</span><span class="s2">&quot;Juan&quot;</span><span class="p">);</span>
+</code></pre></div></p>
+<h3 id="16-metodos-en-objetos"><strong>1.6. Métodos en Objetos</strong></h3>
+<p>Las funciones también pueden ser propiedades de objetos, conocidas como métodos.</p>
+<p><strong>Ejemplo:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">calculadora</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">sumar</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">restar</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="c1">// Método con arrow function</span>
+<span class="p">};</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">calculadora</span><span class="p">.</span><span class="nx">sumar</span><span class="p">(</span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">));</span><span class="w"> </span><span class="c1">// Imprime: 8</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">calculadora</span><span class="p">.</span><span class="nx">restar</span><span class="p">(</span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">));</span><span class="w"> </span><span class="c1">// Imprime: 2</span>
+</code></pre></div></p>
+<hr />
+<h2 id="2-parametros"><strong>2. Parámetros</strong></h2>
+<p>JavaScript ofrece varias formas de manejar parámetros en funciones, incluyendo valores por defecto y rest parameters.</p>
+<h3 id="21-valores-por-defecto"><strong>2.1. Valores por Defecto</strong></h3>
+<p>Desde ES6, se pueden asignar valores por defecto a los parámetros de una función, que se usan si no se proporciona un valor.</p>
+<p><strong>Ejemplo:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">saludar</span><span class="p">(</span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Invitado&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="sb">`¡Hola, </span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">!`</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">saludar</span><span class="p">());</span><span class="w"> </span><span class="c1">// Imprime: ¡Hola, Invitado!</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">saludar</span><span class="p">(</span><span class="s2">&quot;Ana&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// Imprime: ¡Hola, Ana!</span>
+</code></pre></div></p>
+<p><strong>Con múltiples parámetros:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">calcularArea</span><span class="p">(</span><span class="nx">base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">altura</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">base</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">altura</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">calcularArea</span><span class="p">());</span><span class="w"> </span><span class="c1">// Imprime: 1</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">calcularArea</span><span class="p">(</span><span class="mf">5</span><span class="p">));</span><span class="w"> </span><span class="c1">// Imprime: 5</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">calcularArea</span><span class="p">(</span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">));</span><span class="w"> </span><span class="c1">// Imprime: 15</span>
+</code></pre></div></p>
+<h3 id="22-rest-parameters"><strong>2.2. Rest Parameters</strong></h3>
+<p>Los rest parameters permiten que una función acepte un número variable de argumentos como un array, usando el operador <code>...</code>.</p>
+<p><strong>Sintaxis:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">nombreDeLaFuncion</span><span class="p">(...</span><span class="nx">parametros</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Código</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Ejemplo:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">sumarTodo</span><span class="p">(...</span><span class="nx">numeros</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">numeros</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">total</span><span class="p">,</span><span class="w"> </span><span class="nx">num</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sumarTodo</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">));</span><span class="w"> </span><span class="c1">// Imprime: 6</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sumarTodo</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">));</span><span class="w"> </span><span class="c1">// Imprime: 15</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sumarTodo</span><span class="p">());</span><span class="w"> </span><span class="c1">// Imprime: 0</span>
+</code></pre></div></p>
+<p><strong>Combinando con parámetros normales:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">describirPersona</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="nx">hobbies</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb"> tiene los siguientes hobbies: </span><span class="si">${</span><span class="nx">hobbies</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">describirPersona</span><span class="p">(</span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;leer&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;pintar&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;caminar&quot;</span><span class="p">));</span><span class="w"> </span>
+<span class="c1">// Imprime: Ana tiene los siguientes hobbies: leer, pintar, caminar</span>
+</code></pre></div></p>
+<p><strong>Nota:</strong> Los rest parameters deben ser el último parámetro en la lista.</p>
+<hr />
+<h2 id="3-retorno-de-valores-y-ambito-scope"><strong>3. Retorno de Valores y Ámbito (Scope)</strong></h2>
+<h3 id="31-retorno-de-valores"><strong>3.1. Retorno de Valores</strong></h3>
+<p>Las funciones pueden devolver un valor usando la palabra clave <code>return</code>. Si no se especifica, la función devuelve <code>undefined</code> por defecto.</p>
+<p><strong>Ejemplo:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">dividir</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">b</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot;Error: División por cero&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">dividir</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">));</span><span class="w"> </span><span class="c1">// Imprime: 5</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">dividir</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">));</span><span class="w"> </span><span class="c1">// Imprime: Error: División por cero</span>
+</code></pre></div></p>
+<p><strong>Retorno implícito en arrow functions:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">dividir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="nx">b</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">&quot;Error: División por cero&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">dividir</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">));</span><span class="w"> </span><span class="c1">// Imprime: 5</span>
+</code></pre></div></p>
+<h3 id="32-ambito-scope"><strong>3.2. Ámbito (Scope)</strong></h3>
+<p>El ámbito determina la visibilidad de las variables dentro de una función. JavaScript tiene tres tipos principales de ámbito:</p>
+<ul>
+<li><strong>Ámbito global:</strong> Variables definidas fuera de cualquier función, accesibles desde cualquier lugar.</li>
+<li><strong>Ámbito de función:</strong> Variables definidas dentro de una función, accesibles solo dentro de ella.</li>
+<li><strong>Ámbito de bloque (ES6):</strong> Variables declaradas con <code>let</code> o <code>const</code> dentro de un bloque <code>{}</code> solo son accesibles dentro de ese bloque.</li>
+</ul>
+<p><strong>Ejemplo de ámbito de función:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">mostrarMensaje</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;¡Estoy dentro de la función!&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mensaje</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime: ¡Estoy dentro de la función!</span>
+<span class="p">}</span>
+
+<span class="nx">mostrarMensaje</span><span class="p">();</span>
+<span class="c1">// console.log(mensaje); // Error: mensaje is not defined</span>
+</code></pre></div></p>
+<p><strong>Ejemplo de ámbito de bloque:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">variableBloque</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Solo en el bloque&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">variableBloque</span><span class="p">);</span><span class="w"> </span><span class="c1">// Imprime: Solo en el bloque</span>
+<span class="p">}</span>
+<span class="c1">// console.log(variableBloque); // Error: variableBloque is not defined</span>
+</code></pre></div></p>
+<p><strong>Cierres (Closures):</strong>
+Un cierre ocurre cuando una función interna tiene acceso a las variables de una función externa, incluso después de que la función externa haya terminado de ejecutarse.</p>
+<p><strong>Ejemplo:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">crearContador</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">contador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">contador</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">contador</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="p">}</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">contador1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">crearContador</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">contador1</span><span class="p">());</span><span class="w"> </span><span class="c1">// Imprime: 1</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">contador1</span><span class="p">());</span><span class="w"> </span><span class="c1">// Imprime: 2</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">contador1</span><span class="p">());</span><span class="w"> </span><span class="c1">// Imprime: 3</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">contador2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">crearContador</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">contador2</span><span class="p">());</span><span class="w"> </span><span class="c1">// Imprime: 1 (nuevo contador independiente)</span>
+</code></pre></div></p>
+<hr />
+<h2 id="4-llamadas-a-funciones-y-reutilizacion-de-codigo"><strong>4. Llamadas a Funciones y Reutilización de Código</strong></h2>
+<h3 id="41-llamadas-a-funciones"><strong>4.1. Llamadas a Funciones</strong></h3>
+<p>Las funciones se invocan usando su nombre seguido de paréntesis con los argumentos necesarios.</p>
+<p><strong>Ejemplo:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">saludar</span><span class="p">(</span><span class="nx">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="sb">`¡Hola, </span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">!`</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">saludar</span><span class="p">(</span><span class="s2">&quot;Ana&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// Imprime: ¡Hola, Ana!</span>
+</code></pre></div></p>
+<p><strong>Pasando funciones como argumentos:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">ejecutarOperacion</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">,</span><span class="w"> </span><span class="nx">operacion</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">operacion</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ejecutarOperacion</span><span class="p">(</span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="nx">suma</span><span class="p">));</span><span class="w"> </span><span class="c1">// Imprime: 8</span>
+</code></pre></div></p>
+<h3 id="42-reutilizacion-de-codigo"><strong>4.2. Reutilización de Código</strong></h3>
+<p>Las funciones son fundamentales para la reutilización de código. Por ejemplo, una función puede ser usada en diferentes contextos para evitar repetir lógica.</p>
+<p><strong>Ejemplo práctico:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">calcularImpuesto</span><span class="p">(</span><span class="nx">precio</span><span class="p">,</span><span class="w"> </span><span class="nx">tasa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.21</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">precio</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">tasa</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">producto1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">producto2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">200</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">calcularImpuesto</span><span class="p">(</span><span class="nx">producto1</span><span class="p">));</span><span class="w"> </span><span class="c1">// Imprime: 21</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">calcularImpuesto</span><span class="p">(</span><span class="nx">producto2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">));</span><span class="w"> </span><span class="c1">// Imprime: 20</span>
+</code></pre></div></p>
+<p><strong>Ejemplo con arrays:</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">procesarNumeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">numeros</span><span class="p">,</span><span class="w"> </span><span class="nx">callback</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">numeros</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">callback</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">duplicar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">triplicar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">procesarNumeros</span><span class="p">(</span><span class="nx">lista</span><span class="p">,</span><span class="w"> </span><span class="nx">duplicar</span><span class="p">));</span><span class="w"> </span><span class="c1">// Imprime: [2, 4, 6, 8]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">procesarNumeros</span><span class="p">(</span><span class="nx">lista</span><span class="p">,</span><span class="w"> </span><span class="nx">triplicar</span><span class="p">));</span><span class="w"> </span><span class="c1">// Imprime: [3, 6, 9, 12]</span>
+</code></pre></div></p>
+<hr />
+<h2 id="actividad-20-ejercicios-sobre-funciones-en-javascript"><strong>Actividad: 20 Ejercicios sobre Funciones en JavaScript</strong></h2>
+<h3 id="instrucciones"><strong>Instrucciones</strong></h3>
+<ol>
+<li>Resuelve cada ejercicio escribiendo el código en JavaScript.</li>
+<li>Prueba tus soluciones en un entorno como la consola del navegador o un editor como VS Code.</li>
+<li>Asegúrate de entender cómo funcionan las funciones, los parámetros, el ámbito y las diferentes formas de declarar funciones.</li>
+</ol>
+<hr />
+<h3 id="ejercicios-basicos"><strong>Ejercicios Básicos</strong></h3>
+<ol>
+<li>
+<p><strong>Saludo simple</strong><br />
+   Escribe una <strong>declaración de función</strong> que reciba un nombre como parámetro y devuelva un saludo. Ejemplo: <code>saludar("Ana")</code> → <code>"¡Hola, Ana!"</code>.</p>
+</li>
+<li>
+<p><strong>Suma de dos números</strong><br />
+   Crea una <strong>expresión de función</strong> que sume dos números y devuelva el resultado. Ejemplo: <code>sumar(3, 5)</code> → <code>8</code>.</p>
+</li>
+<li>
+<p><strong>Arrow function para duplicar</strong><br />
+   Escribe una <strong>arrow function</strong> que reciba un número y devuelva su doble. Ejemplo: <code>duplicar(4)</code> → <code>8</code>.</p>
+</li>
+<li>
+<p><strong>Par o impar</strong><br />
+   Crea una <strong>declaración de función</strong> que determine si un número es par o impar. Ejemplo: <code>esPar(6)</code> → <code>true</code>, <code>esPar(7)</code> → <code>false</code>.</p>
+</li>
+<li>
+<p><strong>Valor por defecto</strong><br />
+   Escribe una función que reciba un nombre y un saludo opcional (por defecto: "Hola"). Ejemplo: <code>saludar("Juan")</code> → <code>"Hola, Juan"</code>, <code>saludar("Ana", "Buenos días")</code> → <code>"Buenos días, Ana"</code>.</p>
+</li>
+<li>
+<p><strong>Función sin parámetros</strong><br />
+   Crea una <strong>arrow function</strong> sin parámetros que devuelva un mensaje fijo. Ejemplo: <code>mensaje()</code> → <code>"¡JavaScript es genial!"</code>.</p>
+</li>
+<li>
+<p><strong>IIFE simple</strong><br />
+   Escribe una <strong>IIFE</strong> que imprima en consola "¡Soy una IIFE!" sin contaminar el ámbito global.</p>
+</li>
+</ol>
+<hr />
+<h3 id="ejercicios-intermedios"><strong>Ejercicios Intermedios</strong></h3>
+<ol>
+<li>
+<p><strong>Suma de un array</strong><br />
+   Crea una <strong>expresión de función</strong> que reciba un array de números y devuelva su suma usando un bucle o <code>reduce</code>. Ejemplo: <code>sumarArray([1, 2, 3])</code> → <code>6</code>.</p>
+</li>
+<li>
+<p><strong>Rest parameters</strong><br />
+   Escribe una función que use <strong>rest parameters</strong> para aceptar cualquier número de argumentos y devuelva su producto. Ejemplo: <code>multiplicar(2, 3, 4)</code> → <code>24</code>.</p>
+</li>
+<li>
+<p><strong>Cierre (closure)</strong><br />
+    Crea una función que devuelva otra función que incremente un contador privado cada vez que se llame. Ejemplo:<br />
+    <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">contador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">crearContador</span><span class="p">();</span>
+<span class="nx">contador</span><span class="p">();</span><span class="w"> </span><span class="c1">// 1</span>
+<span class="nx">contador</span><span class="p">();</span><span class="w"> </span><span class="c1">// 2</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Método en objeto</strong><br />
+    Crea un objeto <code>calculadora</code> con un método <code>sumar</code> (usando una declaración de función) y otro método <code>restar</code> (usando una arrow function). Ejemplo:<br />
+    <div class="highlight"><pre><span></span><code><span class="nx">calculadora</span><span class="p">.</span><span class="nx">sumar</span><span class="p">(</span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">);</span><span class="w"> </span><span class="c1">// 8</span>
+<span class="nx">calculadora</span><span class="p">.</span><span class="nx">restar</span><span class="p">(</span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">);</span><span class="w"> </span><span class="c1">// 2</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Factorial recursivo</strong><br />
+    Escribe una <strong>expresión de función nombrada</strong> que calcule el factorial de un número. Ejemplo: <code>factorial(5)</code> → <code>120</code>.</p>
+</li>
+<li>
+<p><strong>Filtrar mayores</strong><br />
+    Crea una <strong>arrow function</strong> que reciba un array de números y devuelva un nuevo array con los números mayores a 10. Ejemplo: <code>filtrarMayores([5, 12, 8, 15])</code> → <code>[12, 15]</code>.</p>
+</li>
+<li>
+<p><strong>Parámetros por defecto avanzado</strong><br />
+    Escribe una función que calcule el área de un rectángulo con base y altura, usando valores por defecto de 1 para ambos. Ejemplo: <code>calcularArea(5)</code> → <code>5</code>, <code>calcularArea(5, 3)</code> → <code>15</code>.</p>
+</li>
+</ol>
+<hr />
+<h3 id="ejercicios-avanzados"><strong>Ejercicios Avanzados</strong></h3>
+<ol>
+<li>
+<p><strong>Callback</strong><br />
+    Crea una función que reciba un array de números y una función de callback para procesar cada elemento. Ejemplo:<br />
+    <div class="highlight"><pre><span></span><code><span class="nx">procesar</span><span class="p">([</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">],</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span><span class="w"> </span><span class="c1">// [2, 4, 6]</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Ámbito y cierre</strong><br />
+    Crea una función que genere un generador de saludos personalizados. La función externa recibe un saludo base, y la función interna recibe un nombre. Ejemplo:<br />
+    <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">saludarConHola</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">crearSaludo</span><span class="p">(</span><span class="s2">&quot;Hola&quot;</span><span class="p">);</span>
+<span class="nx">saludarConHola</span><span class="p">(</span><span class="s2">&quot;Ana&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;Hola, Ana&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>IIFE con parámetros</strong><br />
+    Escribe una <strong>IIFE</strong> que reciba dos números y devuelva su suma, ejecutándose inmediatamente. Ejemplo: <code>(function(a, b) {...})(3, 5)</code> → <code>8</code>.</p>
+</li>
+<li>
+<p><strong>Función como método dinámico</strong><br />
+    Crea un objeto <code>persona</code> con un método <code>presentarse</code> que use una <strong>arrow function</strong> para devolver una presentación. Ejemplo:<br />
+    <div class="highlight"><pre><span></span><code><span class="nx">persona</span><span class="p">.</span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Ana&quot;</span><span class="p">;</span>
+<span class="nx">persona</span><span class="p">.</span><span class="nx">presentarse</span><span class="p">();</span><span class="w"> </span><span class="c1">// &quot;Mi nombre es Ana&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Rest parameters y reduce</strong><br />
+    Escribe una función que use <strong>rest parameters</strong> para calcular el promedio de todos los números recibidos. Ejemplo: <code>promedio(10, 20, 30)</code> → <code>20</code>.</p>
+</li>
+<li>
+<p><strong>Combinación de funciones</strong><br />
+    Crea una función <code>componer</code> que combine dos funciones, donde el resultado de la primera se pasa como argumento a la segunda. Ejemplo:<br />
+    <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">duplicar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">sumarDiez</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">combinada</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">componer</span><span class="p">(</span><span class="nx">duplicar</span><span class="p">,</span><span class="w"> </span><span class="nx">sumarDiez</span><span class="p">);</span>
+<span class="nx">combinada</span><span class="p">(</span><span class="mf">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// (5 * 2) + 10 = 20</span>
+</code></pre></div></p>
+</li>
+</ol>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025 &copy; by JFVG
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs.sticky", "navigation.tabs", "navigation.top", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

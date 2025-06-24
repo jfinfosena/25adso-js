@@ -1,0 +1,2182 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="jhonfvg">
+      
+      
+        <link rel="canonical" href="https://jfinfosena.github.io/25adso-js/content/p10/">
+      
+      
+        <link rel="prev" href="../p9/">
+      
+      
+        <link rel="next" href="../../pi/p1/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>Actividad Grupal: Creación y Consumo de API con MockAPI.io, HTML, CSS y JavaScript - JavaScript</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#actividad-grupal-creacion-y-consumo-de-api-con-mockapiio-html-css-y-javascript" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="JavaScript" class="md-header__button md-logo" aria-label="JavaScript" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            JavaScript
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Actividad Grupal: Creación y Consumo de API con MockAPI.io, HTML, CSS y JavaScript
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../p0/" class="md-tabs__link">
+          
+  
+    
+  
+  Contenido
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../pi/p1/" class="md-tabs__link">
+          
+  
+    
+  
+  Proyecto Integrador
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+    
+  
+  Acerca de
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="JavaScript" class="md-nav__button md-logo" aria-label="JavaScript" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg>
+
+    </a>
+    JavaScript
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Contenido
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Contenido
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción a JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tipos de datos y operadores básicos en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructuras Condicionales, Bucles e Iteraciones en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funciones en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arreglos en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guía Completa del DOM en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Métodos Asíncronos y Fetch en JavaScript con Mockoon Playground
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tutorial Completo sobre Eventos en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tutorial Completo sobre Local Storage, Session Storage y Cookies en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actividad Grupal: Consumo de API RESTful con HTML, CSS y JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Actividad Grupal: Creación y Consumo de API con MockAPI.io, HTML, CSS y JavaScript
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Actividad Grupal: Creación y Consumo de API con MockAPI.io, HTML, CSS y JavaScript
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción General
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Descripción General">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tema-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tema del Proyecto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requisitos-minimos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requisitos Mínimos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Requisitos Mínimos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-configuracion-de-la-api-en-mockapiio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Configuración de la API en MockAPI.io
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-interfaz-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Interfaz Web
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-consumo-de-la-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Consumo de la API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-manejo-del-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Manejo del DOM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-validacion-y-manejo-de-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Validación y Manejo de Errores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-persistencia-local-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Persistencia Local (Opcional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-documentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Documentación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-practico-interfaz-para-un-sistema-de-tareas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo Práctico: Interfaz para un Sistema de Tareas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplo Práctico: Interfaz para un Sistema de Tareas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-configuracion-en-mockapiio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 1: Configuración en MockAPI.io
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-interfaz-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 2: Interfaz Web
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rubrica-de-evaluacion-creacion-y-consumo-de-api-con-mockapiio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rúbrica de Evaluación: Creación y Consumo de API con MockAPI.io
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rúbrica de Evaluación: Creación y Consumo de API con MockAPI.io">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion-general_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura de Evaluación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura de Evaluación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#escala-de-puntuacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escala de Puntuación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clase-1-planificacion-y-diseno-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clase 1: Planificación y Diseño Inicial
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clase-2-implementacion-y-progreso-tecnico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clase 2: Implementación y Progreso Técnico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clase-3-implementacion-final-y-exposicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clase 3: Implementación Final y Exposición
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formato-sugerido-para-la-exposicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formato Sugerido para la Exposición
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculo-de-la-nota-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cálculo de la Nota Final
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instrucciones-para-la-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instrucciones para la Evaluación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-adicional-filtrar-tareas-por-estado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo Adicional: Filtrar Tareas por Estado
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Proyecto Integrador
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Proyecto Integrador
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pi/p1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción Proyecto Integrador
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../blog/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archivo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acerca de
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción General
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Descripción General">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tema-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tema del Proyecto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requisitos-minimos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requisitos Mínimos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Requisitos Mínimos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-configuracion-de-la-api-en-mockapiio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Configuración de la API en MockAPI.io
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-interfaz-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Interfaz Web
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-consumo-de-la-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Consumo de la API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-manejo-del-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Manejo del DOM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-validacion-y-manejo-de-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Validación y Manejo de Errores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-persistencia-local-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Persistencia Local (Opcional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-documentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Documentación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-practico-interfaz-para-un-sistema-de-tareas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo Práctico: Interfaz para un Sistema de Tareas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplo Práctico: Interfaz para un Sistema de Tareas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-configuracion-en-mockapiio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 1: Configuración en MockAPI.io
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-interfaz-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 2: Interfaz Web
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rubrica-de-evaluacion-creacion-y-consumo-de-api-con-mockapiio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rúbrica de Evaluación: Creación y Consumo de API con MockAPI.io
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rúbrica de Evaluación: Creación y Consumo de API con MockAPI.io">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion-general_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura de Evaluación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructura de Evaluación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#escala-de-puntuacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escala de Puntuación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clase-1-planificacion-y-diseno-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clase 1: Planificación y Diseño Inicial
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clase-2-implementacion-y-progreso-tecnico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clase 2: Implementación y Progreso Técnico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clase-3-implementacion-final-y-exposicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clase 3: Implementación Final y Exposición
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formato-sugerido-para-la-exposicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formato Sugerido para la Exposición
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculo-de-la-nota-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cálculo de la Nota Final
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instrucciones-para-la-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instrucciones para la Evaluación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-adicional-filtrar-tareas-por-estado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo Adicional: Filtrar Tareas por Estado
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="actividad-grupal-creacion-y-consumo-de-api-con-mockapiio-html-css-y-javascript">Actividad Grupal: Creación y Consumo de API con MockAPI.io, HTML, CSS y JavaScript</h1>
+<h2 id="descripcion-general">Descripción General</h2>
+<p>Como equipo de desarrollo frontend, su tarea es diseñar y construir una interfaz web básica utilizando <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong> para consumir una API RESTful simulada creada en <strong>MockAPI.io</strong>. Además, deberán configurar la API en MockAPI.io para modelar al menos una entidad con operaciones CRUD (Crear, Leer, Actualizar, Eliminar). Esta actividad busca consolidar los conocimientos sobre consumo de APIs, manejo de solicitudes HTTP, manipulación del DOM, diseño de interfaces responsivas y la creación de APIs simuladas para pruebas.</p>
+<h3 id="tema-del-proyecto">Tema del Proyecto</h3>
+<p>El tema de la API es libre, pero debe representar un sistema simple que gestione al menos una entidad principal. Ejemplos de temas:</p>
+<ul>
+<li>Un sistema de gestión de tareas (entidad: <code>Task</code>).</li>
+<li>Una lista de productos para una tienda (entidad: <code>Product</code>).</li>
+<li>Un registro de eventos (entidad: <code>Event</code>).</li>
+<li>Una lista de contactos (entidad: <code>Contact</code>).</li>
+</ul>
+<p><strong>Consejo</strong>: Elijan un tema que sea sencillo pero que permita demostrar las operaciones CRUD de manera clara. Por ejemplo, una entidad <code>Task</code> con propiedades como <code>id</code>, <code>title</code>, <code>description</code> y <code>completed</code> es ideal para esta actividad.</p>
+<h2 id="requisitos-minimos">Requisitos Mínimos</h2>
+<h3 id="1-configuracion-de-la-api-en-mockapiio">1. Configuración de la API en MockAPI.io</h3>
+<ul>
+<li>Crear una cuenta en <strong>MockAPI.io</strong> (https://mockapi.io/) y un nuevo proyecto.</li>
+<li>Definir al menos una entidad (recurso) con las siguientes propiedades mínimas:<ul>
+<li><code>id</code>: Identificador único (generado automáticamente por MockAPI.io).</li>
+<li>Al menos tres propiedades adicionales relevantes al tema (por ejemplo, <code>title</code>, <code>description</code>, <code>completed</code> para una tarea).</li>
+</ul>
+</li>
+<li>Configurar los endpoints CRUD automáticos proporcionados por MockAPI.io:<ul>
+<li><code>GET /resources</code>: Obtener todos los registros.</li>
+<li><code>GET /resources/:id</code>: Obtener un registro por ID.</li>
+<li><code>POST /resources</code>: Crear un nuevo registro.</li>
+<li><code>PUT /resources/:id</code>: Actualizar un registro.</li>
+<li><code>DELETE /resources/:id</code>: Eliminar un registro.</li>
+</ul>
+</li>
+<li>Poblar la API con al menos 5 registros iniciales para pruebas.</li>
+</ul>
+<h3 id="2-interfaz-web">2. Interfaz Web</h3>
+<ul>
+<li>Diseñar una interfaz web simple y funcional usando <strong>HTML</strong> y <strong>CSS</strong>.</li>
+<li>La interfaz debe ser responsiva (usar media queries o un framework CSS como Bootstrap vía CDN).</li>
+<li>Incluir:<ul>
+<li>Un formulario para crear y/o actualizar registros.</li>
+<li>Una lista o tabla para mostrar los datos obtenidos de la API.</li>
+<li>Botones para editar y eliminar registros.</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-consumo-de-la-api">3. Consumo de la API</h3>
+<ul>
+<li>Implementar solicitudes HTTP usando la API <strong>Fetch</strong> de JavaScript para consumir los endpoints de MockAPI.io.</li>
+<li>Cubrir las operaciones CRUD para la entidad definida:<ul>
+<li><strong>Crear</strong>: Enviar una solicitud <code>POST</code> para crear un nuevo registro.</li>
+<li><strong>Leer</strong>: Enviar una solicitud <code>GET</code> para obtener y mostrar la lista de registros.</li>
+<li><strong>Actualizar</strong>: Enviar una solicitud <code>PUT</code> para modificar un registro existente.</li>
+<li><strong>Eliminar</strong>: Enviar una solicitud <code>DELETE</code> para eliminar un registro.</li>
+</ul>
+</li>
+<li>Manejar las respuestas de la API, incluyendo códigos de estado (200, 404, 500, etc.) y mensajes de error.</li>
+</ul>
+<h3 id="4-manejo-del-dom">4. Manejo del DOM</h3>
+<ul>
+<li>Usar JavaScript para actualizar dinámicamente el DOM con los datos obtenidos de la API.</li>
+<li>Implementar eventos (como clics en botones o envíos de formularios) para interactuar con la API.</li>
+<li>Mostrar retroalimentación al usuario (por ejemplo, mensajes de éxito o error).</li>
+</ul>
+<h3 id="5-validacion-y-manejo-de-errores">5. Validación y Manejo de Errores</h3>
+<ul>
+<li>Validar los datos del formulario en el frontend antes de enviarlos a la API.</li>
+<li>Mostrar mensajes de error claros si la solicitud falla (por ejemplo, datos inválidos o servidor no disponible).</li>
+<li>Usar <code>try-catch</code> para manejar errores en las solicitudes Fetch.</li>
+</ul>
+<h3 id="6-persistencia-local-opcional">6. Persistencia Local (Opcional)</h3>
+<ul>
+<li>Usar <code>localStorage</code> o <code>sessionStorage</code> para almacenar datos temporales, como un filtro aplicado o datos del formulario antes de enviarlos.</li>
+</ul>
+<h3 id="7-documentacion">7. Documentación</h3>
+<ul>
+<li>Incluir un archivo <code>README.md</code> que explique:<ul>
+<li>Cómo configurar y ejecutar la aplicación frontend.</li>
+<li>Cómo crear el proyecto en MockAPI.io (incluyendo el esquema de la entidad).</li>
+<li>Los endpoints de la API consumidos.</li>
+<li>Ejemplos de uso (por ejemplo, capturas de pantalla o solicitudes de ejemplo).</li>
+<li>Dependencias externas (si se usa un framework CSS o bibliotecas como Axios).</li>
+</ul>
+</li>
+</ul>
+<h2 id="ejemplo-practico-interfaz-para-un-sistema-de-tareas">Ejemplo Práctico: Interfaz para un Sistema de Tareas</h2>
+<p>Este ejemplo muestra cómo crear una API simulada en MockAPI.io para gestionar tareas y una interfaz web que la consume.</p>
+<h3 id="paso-1-configuracion-en-mockapiio">Paso 1: Configuración en MockAPI.io</h3>
+<ol>
+<li>Regístrate en https://mockapi.io/ y crea un nuevo proyecto llamado <code>TaskManager</code>.</li>
+<li>Define un recurso llamado <code>tasks</code> con el siguiente esquema:
+   <div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;generated-id&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;completed&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;boolean&quot;</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li>Añade al menos 5 tareas iniciales, por ejemplo:
+   <div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Comprar víveres&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Leche, pan, huevos&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;completed&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Estudiar JavaScript&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Completar tutorial&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;completed&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hacer ejercicio&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Correr 30 min&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;completed&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Llamar a mamá&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Preguntar cómo está&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;completed&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;5&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Terminar proyecto&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Revisar código&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;completed&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div></li>
+<li>Obtén la URL base de la API (por ejemplo, <code>https://1234567890.mockapi.io/api/v1/tasks</code>).</li>
+</ol>
+<h3 id="paso-2-interfaz-web">Paso 2: Interfaz Web</h3>
+<p>El siguiente código implementa una interfaz para gestionar tareas consumiendo la API de MockAPI.io.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Gestión de Tareas<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Arial</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="w">      </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">800</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span>
+<span class="w">      </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">form-container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nt">input</span><span class="o">,</span><span class="w"> </span><span class="nt">textarea</span><span class="o">,</span><span class="w"> </span><span class="nt">button</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="nb">calc</span><span class="p">(</span><span class="mi">100</span><span class="kt">%</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">18</span><span class="kt">px</span><span class="p">);</span>
+<span class="w">      </span><span class="k">box-sizing</span><span class="p">:</span><span class="w"> </span><span class="kc">border-box</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">task-list</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">list-style</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">      </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">task-item</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ccc</span><span class="p">;</span>
+<span class="w">      </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">      </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">      </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="kc">space-between</span><span class="p">;</span>
+<span class="w">      </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">completed</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">text-decoration</span><span class="p">:</span><span class="w"> </span><span class="kc">line-through</span><span class="p">;</span>
+<span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#888</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">error</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">success</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="o">(</span><span class="nt">max-width</span><span class="o">:</span><span class="w"> </span><span class="nt">600px</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="p">.</span><span class="nc">task-item</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">flex-direction</span><span class="p">:</span><span class="w"> </span><span class="kc">column</span><span class="p">;</span>
+<span class="w">        </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">flex-start</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="nt">button</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Gestión de Tareas<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-container&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;taskTitle&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Título de la tarea&quot;</span> <span class="na">required</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;taskDescription&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Descripción de la tarea&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;taskCompleted&quot;</span><span class="p">&gt;</span> Completada<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;crearOActualizarTarea()&quot;</span><span class="p">&gt;</span>Crear Tarea<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mensaje&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;taskList&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;task-list&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">API_URL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;https://1234567890.mockapi.io/api/v1/tasks&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Reemplazar con tu URL de MockAPI.io</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">taskList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;taskList&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">taskTitle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;taskTitle&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">taskDescription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;taskDescription&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">taskCompleted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;taskCompleted&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;mensaje&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">editingTaskId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Cargar tareas al iniciar</span>
+<span class="w">    </span><span class="nx">cargarTareas</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Función para cargar y mostrar tareas</span>
+<span class="w">    </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">cargarTareas</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="nx">API_URL</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s1">&#39;Error al cargar tareas&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">tareas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+<span class="w">        </span><span class="nx">taskList</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">tareas</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">tarea</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="kd">const</span><span class="w"> </span><span class="nx">li</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;li&#39;</span><span class="p">);</span>
+<span class="w">          </span><span class="nx">li</span><span class="p">.</span><span class="nx">className</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;task-item&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nx">tarea</span><span class="p">.</span><span class="nx">completed</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39; completed&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+<span class="w">          </span><span class="nx">li</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span>
+<span class="sb">            &lt;div&gt;</span>
+<span class="sb">              &lt;strong&gt;</span><span class="si">${</span><span class="nx">tarea</span><span class="p">.</span><span class="nx">title</span><span class="si">}</span><span class="sb">&lt;/strong&gt;&lt;br&gt;</span>
+<span class="sb">              </span><span class="si">${</span><span class="nx">tarea</span><span class="p">.</span><span class="nx">description</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;Sin descripción&#39;</span><span class="si">}</span><span class="sb">&lt;br&gt;</span>
+<span class="sb">              Estado: </span><span class="si">${</span><span class="nx">tarea</span><span class="p">.</span><span class="nx">completed</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;Completada&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Pendiente&#39;</span><span class="si">}</span>
+<span class="sb">            &lt;/div&gt;</span>
+<span class="sb">            &lt;div&gt;</span>
+<span class="sb">              &lt;button onclick=&quot;prepararEdicion(</span><span class="si">${</span><span class="nx">tarea</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb">, &#39;</span><span class="si">${</span><span class="nx">tarea</span><span class="p">.</span><span class="nx">title</span><span class="si">}</span><span class="sb">&#39;, &#39;</span><span class="si">${</span><span class="nx">tarea</span><span class="p">.</span><span class="nx">description</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="si">}</span><span class="sb">&#39;, </span><span class="si">${</span><span class="nx">tarea</span><span class="p">.</span><span class="nx">completed</span><span class="si">}</span><span class="sb">)&quot;&gt;Editar&lt;/button&gt;</span>
+<span class="sb">              &lt;button onclick=&quot;eliminarTarea(</span><span class="si">${</span><span class="nx">tarea</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb">)&quot;&gt;Eliminar&lt;/button&gt;</span>
+<span class="sb">            &lt;/div&gt;</span>
+<span class="sb">          `</span><span class="p">;</span>
+<span class="w">          </span><span class="nx">taskList</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">li</span><span class="p">);</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">mostrarMensaje</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;error&#39;</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Función para crear o actualizar una tarea</span>
+<span class="w">    </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">crearOActualizarTarea</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">taskTitle</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">taskDescription</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">completed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">taskCompleted</span><span class="p">.</span><span class="nx">checked</span><span class="p">;</span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">title</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">mostrarMensaje</span><span class="p">(</span><span class="s1">&#39;El título es obligatorio&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;error&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">tarea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">title</span><span class="p">,</span><span class="w"> </span><span class="nx">description</span><span class="p">,</span><span class="w"> </span><span class="nx">completed</span><span class="w"> </span><span class="p">};</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">editingTaskId</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">API_URL</span><span class="si">}</span><span class="sb">/</span><span class="si">${</span><span class="nx">editingTaskId</span><span class="si">}</span><span class="sb">`</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">API_URL</span><span class="p">;</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">editingTaskId</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;PUT&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="p">;</span>
+
+<span class="w">      </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">method</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">          </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">tarea</span><span class="p">)</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="sb">`Error al </span><span class="si">${</span><span class="nx">editingTaskId</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;actualizar&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;crear&#39;</span><span class="si">}</span><span class="sb"> tarea`</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">limpiarFormulario</span><span class="p">();</span>
+<span class="w">        </span><span class="nx">mostrarMensaje</span><span class="p">(</span><span class="sb">`Tarea </span><span class="si">${</span><span class="nx">editingTaskId</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;actualizada&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;creada&#39;</span><span class="si">}</span><span class="sb"> con éxito`</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;success&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">cargarTareas</span><span class="p">();</span>
+<span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">mostrarMensaje</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;error&#39;</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Función para preparar la edición de una tarea</span>
+<span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">prepararEdicion</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="nx">title</span><span class="p">,</span><span class="w"> </span><span class="nx">description</span><span class="p">,</span><span class="w"> </span><span class="nx">completed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">editingTaskId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">id</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">taskTitle</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">title</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">taskDescription</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">description</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">taskCompleted</span><span class="p">.</span><span class="nx">checked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">completed</span><span class="p">;</span>
+<span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;button[onclick=&quot;crearOActualizarTarea()&quot;]&#39;</span><span class="p">).</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Actualizar Tarea&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Función para eliminar una tarea</span>
+<span class="w">    </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">eliminarTarea</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">confirm</span><span class="p">(</span><span class="s1">&#39;¿Seguro que quieres eliminar esta tarea?&#39;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">API_URL</span><span class="si">}</span><span class="sb">/</span><span class="si">${</span><span class="nx">id</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;DELETE&#39;</span>
+<span class="w">          </span><span class="p">});</span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s1">&#39;Error al eliminar tarea&#39;</span><span class="p">);</span>
+<span class="w">          </span><span class="nx">mostrarMensaje</span><span class="p">(</span><span class="s1">&#39;Tarea eliminada con éxito&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;success&#39;</span><span class="p">);</span>
+<span class="w">          </span><span class="nx">cargarTareas</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">mostrarMensaje</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;error&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Función para mostrar mensajes</span>
+<span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">mostrarMensaje</span><span class="p">(</span><span class="nx">texto</span><span class="p">,</span><span class="w"> </span><span class="nx">tipo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">mensaje</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">texto</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">mensaje</span><span class="p">.</span><span class="nx">className</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tipo</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Función para limpiar el formulario</span>
+<span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">limpiarFormulario</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">taskTitle</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">taskDescription</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">taskCompleted</span><span class="p">.</span><span class="nx">checked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">editingTaskId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;button[onclick=&quot;crearOActualizarTarea()&quot;]&#39;</span><span class="p">).</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Crear Tarea&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Explicación del Ejemplo</strong>:</p>
+<ul>
+<li><strong>Configuración en MockAPI.io</strong>:<ul>
+<li>Se crea un recurso <code>tasks</code> con propiedades <code>id</code>, <code>title</code>, <code>description</code> y <code>completed</code>.</li>
+<li>MockAPI.io genera automáticamente los endpoints CRUD (<code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>).</li>
+<li>Se pobla con datos iniciales para pruebas.</li>
+</ul>
+</li>
+<li><strong>HTML</strong>:<ul>
+<li>Contiene un formulario con campos para título, descripción y estado (completada).</li>
+<li>Una lista (<code>&lt;ul&gt;</code>) muestra las tareas con opciones para editar o eliminar.</li>
+</ul>
+</li>
+<li><strong>CSS</strong>:<ul>
+<li>Estiliza la interfaz con un diseño limpio y responsivo (media queries para móviles).</li>
+<li>Resalta tareas completadas con una línea tachada.</li>
+</ul>
+</li>
+<li><strong>JavaScript</strong>:<ul>
+<li>Usa <code>fetch</code> para consumir los endpoints de MockAPI.io.</li>
+<li>Actualiza el DOM dinámicamente para mostrar la lista de tareas.</li>
+<li>Valida el campo de título antes de enviar solicitudes <code>POST</code> o <code>PUT</code>.</li>
+<li>Maneja errores con <code>try-catch</code> y muestra mensajes de éxito o error.</li>
+<li>Soporta edición de tareas rellenando el formulario con los datos actuales.</li>
+</ul>
+</li>
+<li><strong>Funcionalidad</strong>:<ul>
+<li><strong>Crear</strong>: Envía una nueva tarea al endpoint <code>POST /tasks</code>.</li>
+<li><strong>Leer</strong>: Obtiene todas las tareas con <code>GET /tasks</code> y las muestra.</li>
+<li><strong>Actualizar</strong>: Modifica una tarea existente con <code>PUT /tasks/:id</code>.</li>
+<li><strong>Eliminar</strong>: Elimina una tarea con <code>DELETE /tasks/:id</code>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="rubrica-de-evaluacion-creacion-y-consumo-de-api-con-mockapiio">Rúbrica de Evaluación: Creación y Consumo de API con MockAPI.io</h2>
+<h3 id="descripcion-general_1">Descripción General</h3>
+<p>Esta rúbrica evalúa el desarrollo de una interfaz web que consume una API simulada en MockAPI.io a lo largo de tres clases. Cada clase evalúa aspectos específicos, desde la configuración inicial de la API y el diseño de la interfaz hasta la implementación completa y la exposición final. La Clase 3 incluye una presentación oral del proyecto.</p>
+<h3 id="estructura-de-evaluacion">Estructura de Evaluación</h3>
+<p>La evaluación se divide en tres clases, con criterios específicos para cada una. Cada criterio tiene una ponderación y una escala de puntuación (0 a 100). La nota final por clase se calcula según el cumplimiento de los criterios.</p>
+<h4 id="escala-de-puntuacion">Escala de Puntuación</h4>
+<table>
+<thead>
+<tr>
+<th>Puntuación</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>90-100</td>
+<td>Excelente: Cumple todos los requisitos con alta calidad y creatividad.</td>
+</tr>
+<tr>
+<td>70-89</td>
+<td>Bueno: Cumple la mayoría de los requisitos con buena implementación.</td>
+</tr>
+<tr>
+<td>50-69</td>
+<td>Regular: Cumple parcialmente los requisitos, con errores o limitaciones.</td>
+</tr>
+<tr>
+<td>0-49</td>
+<td>Insuficiente: No cumple los requisitos o presenta errores graves.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="clase-1-planificacion-y-diseno-inicial">Clase 1: Planificación y Diseño Inicial</h3>
+<p><strong>Objetivo</strong>: Evaluar la capacidad del equipo para configurar la API en MockAPI.io, definir la entidad y diseñar la interfaz inicial.</p>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Descripción</th>
+<th>Ponderación</th>
+<th>Puntuación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Configuración de MockAPI.io</strong></td>
+<td>Se crea un proyecto en MockAPI.io con una entidad bien definida (mínimo 4 propiedades) y al menos 5 registros iniciales.</td>
+<td>25%</td>
+<td>0-100</td>
+</tr>
+<tr>
+<td><strong>Definición de la Interfaz</strong></td>
+<td>La interfaz propuesta es clara, funcional y se alinea con el tema de la API. Incluye un formulario y una sección para mostrar datos.</td>
+<td>25%</td>
+<td>0-100</td>
+</tr>
+<tr>
+<td><strong>Diseño Visual</strong></td>
+<td>Se presenta un diseño inicial (boceto o HTML/CSS estático) que es responsivo y estilizado.</td>
+<td>25%</td>
+<td>0-100</td>
+</tr>
+<tr>
+<td><strong>Planificación de JavaScript</strong></td>
+<td>Se describe cómo se manejarán las solicitudes HTTP y la manipulación del DOM para consumir la API.</td>
+<td>25%</td>
+<td>0-100</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Entregable Esperado</strong>:</p>
+<ul>
+<li>Documento o presentación con la descripción de la entidad en MockAPI.io, la interfaz propuesta y el boceto visual.</li>
+<li>URL del proyecto en MockAPI.io con el recurso configurado.</li>
+<li>Prototipo estático inicial (HTML/CSS) opcional.</li>
+</ul>
+<h3 id="clase-2-implementacion-y-progreso-tecnico">Clase 2: Implementación y Progreso Técnico</h3>
+<p><strong>Objetivo</strong>: Evaluar el avance en la implementación del consumo de la API y la funcionalidad de la interfaz.</p>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Descripción</th>
+<th>Ponderación</th>
+<th>Puntuación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Consumo de la API</strong></td>
+<td>Se implementan solicitudes HTTP (mínimo <code>GET</code> y <code>POST</code>) usando Fetch, con manejo de respuestas.</td>
+<td>30%</td>
+<td>0-100</td>
+</tr>
+<tr>
+<td><strong>Manejo del DOM</strong></td>
+<td>La interfaz actualiza dinámicamente el DOM con los datos de la API.</td>
+<td>25%</td>
+<td>0-100</td>
+</tr>
+<tr>
+<td><strong>Validación y Errores</strong></td>
+<td>Se valida el formulario y se manejan errores de la API con mensajes claros al usuario.</td>
+<td>20%</td>
+<td>0-100</td>
+</tr>
+<tr>
+<td><strong>Estilo y Responsividad</strong></td>
+<td>La interfaz es visualmente atractiva y responsiva en diferentes dispositivos.</td>
+<td>15%</td>
+<td>0-100</td>
+</tr>
+<tr>
+<td><strong>Pruebas Iniciales</strong></td>
+<td>La interfaz responde correctamente a solicitudes de prueba (probadas manualmente).</td>
+<td>10%</td>
+<td>0-100</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Entregable Esperado</strong>:</p>
+<ul>
+<li>Código fuente parcial con HTML, CSS y JavaScript que consuma al menos dos endpoints (<code>GET</code> y <code>POST</code>).</li>
+<li>Ejemplos funcionales de solicitudes a la API.</li>
+<li>Interfaz estilizada y parcialmente funcional.</li>
+</ul>
+<h3 id="clase-3-implementacion-final-y-exposicion">Clase 3: Implementación Final y Exposición</h3>
+<p><strong>Objetivo</strong>: Evaluar la implementación completa de la interfaz y la calidad de la exposición oral.</p>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Descripción</th>
+<th>Ponderación</th>
+<th>Puntuación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Funcionalidad Completa</strong></td>
+<td>La interfaz consume todos los endpoints CRUD (<code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>) y funciona correctamente.</td>
+<td>30%</td>
+<td>0-100</td>
+</tr>
+<tr>
+<td><strong>Calidad del Código</strong></td>
+<td>El código está organizado, usa funciones modulares y sigue buenas prácticas de JavaScript.</td>
+<td>20%</td>
+<td>0-100</td>
+</tr>
+<tr>
+<td><strong>Documentación</strong></td>
+<td>El archivo <code>README.md</code> explica cómo configurar MockAPI.io, ejecutar la aplicación, los endpoints consumidos y ejemplos de uso.</td>
+<td>20%</td>
+<td>0-100</td>
+</tr>
+<tr>
+<td><strong>Exposición Oral</strong></td>
+<td>La presentación es clara, muestra la interfaz en acción y responde a preguntas de manera efectiva.</td>
+<td>20%</td>
+<td>0-100</td>
+</tr>
+<tr>
+<td><strong>Creatividad y Extras</strong></td>
+<td>Se incluyen elementos adicionales (por ejemplo, <code>localStorage</code>, filtros, animaciones CSS) que enriquecen la interfaz.</td>
+<td>10%</td>
+<td>0-100</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Entregable Esperado</strong>:</p>
+<ul>
+<li>Código fuente completo y funcional de la interfaz.</li>
+<li>Proyecto configurado en MockAPI.io (URL compartida).</li>
+<li>Archivo <code>README.md</code> con instrucciones claras y ejemplos.</li>
+<li>Presentación oral (5-10 minutos) que explique el proyecto, muestre la interfaz en acción y responda preguntas.</li>
+</ul>
+<h3 id="formato-sugerido-para-la-exposicion">Formato Sugerido para la Exposición</h3>
+<ul>
+<li><strong>Introducción (1-2 min)</strong>: Presentar el tema de la API y el propósito de la interfaz.</li>
+<li><strong>Demostración (3-5 min)</strong>: Mostrar la interfaz interactuando con la API (crear, leer, actualizar, eliminar datos).</li>
+<li><strong>Explicación Técnica (2-3 min)</strong>: Describir la configuración en MockAPI.io, el consumo de la API y decisiones de diseño.</li>
+<li><strong>Conclusión (1-2 min)</strong>: Resumir aportes, desafíos superados y posibles mejoras.</li>
+</ul>
+<h3 id="calculo-de-la-nota-final">Cálculo de la Nota Final</h3>
+<p>La nota final del proyecto se calcula como el promedio ponderado de las tres clases:</p>
+<ul>
+<li>Clase 1: 30%</li>
+<li>Clase 2: 30%</li>
+<li>Clase 3: 40%</li>
+</ul>
+<h2 id="instrucciones-para-la-evaluacion">Instrucciones para la Evaluación</h2>
+<ul>
+<li>Cada clase debe entregar los avances correspondientes en un repositorio (por ejemplo, GitHub).</li>
+<li>La exposición en la Clase 3 debe ser presentada por todos los miembros del equipo.</li>
+<li>Se valorará la colaboración y la distribución equitativa de tareas entre los integrantes.</li>
+<li>Compartan la URL del proyecto en MockAPI.io para que el evaluador pueda verificar los endpoints.</li>
+<li>Si usan dependencias externas (como Bootstrap), inclúyanlas vía CDN para simplicidad.</li>
+</ul>
+<h2 id="ejemplo-adicional-filtrar-tareas-por-estado">Ejemplo Adicional: Filtrar Tareas por Estado</h2>
+<p>Este ejemplo extiende la interfaz anterior para incluir un filtro por estado (<code>completed</code>) usando un parámetro de consulta en el endpoint <code>GET /tasks?completed=true</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Gestión de Tareas con Filtro<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Arial</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span><span class="w"> </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">800</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">form-container</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="nt">input</span><span class="o">,</span><span class="w"> </span><span class="nt">textarea</span><span class="o">,</span><span class="w"> </span><span class="nt">button</span><span class="o">,</span><span class="w"> </span><span class="nt">select</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="nb">calc</span><span class="p">(</span><span class="mi">100</span><span class="kt">%</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">18</span><span class="kt">px</span><span class="p">);</span><span class="w"> </span><span class="k">box-sizing</span><span class="p">:</span><span class="w"> </span><span class="kc">border-box</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">task-list</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">list-style</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">task-item</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ccc</span><span class="p">;</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">completed</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">text-decoration</span><span class="p">:</span><span class="w"> </span><span class="kc">line-through</span><span class="p">;</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#888</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">error</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">success</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="o">(</span><span class="nt">max-width</span><span class="o">:</span><span class="w"> </span><span class="nt">600px</span><span class="o">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">.</span><span class="nc">task-item</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">flex-direction</span><span class="p">:</span><span class="w"> </span><span class="kc">column</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="nt">button</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Gestión de Tareas<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;form-container&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;taskTitle&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Título de la tarea&quot;</span> <span class="na">required</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;taskDescription&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Descripción de la tarea&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;taskCompleted&quot;</span><span class="p">&gt;</span> Completada<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;filterStatus&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>Todas las tareas<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;true&quot;</span><span class="p">&gt;</span>Completadas<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;false&quot;</span><span class="p">&gt;</span>Pendientes<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;crearOActualizarTarea()&quot;</span><span class="p">&gt;</span>Crear Tarea<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mensaje&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;taskList&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;task-list&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">API_URL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;https://1234567890.mockapi.io/api/v1/tasks&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Reemplazar con tu URL de MockAPI.io</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">taskList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;taskList&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">taskTitle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;taskTitle&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">taskDescription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;taskDescription&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">taskCompleted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;taskCompleted&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">filterStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;filterStatus&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">mensaje</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;mensaje&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">editingTaskId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Cargar tareas al iniciar</span>
+<span class="w">    </span><span class="nx">cargarTareas</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Función para cargar y mostrar tareas</span>
+<span class="w">    </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">cargarTareas</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">filterStatus</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">status</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">API_URL</span><span class="si">}</span><span class="sb">?completed=</span><span class="si">${</span><span class="nx">status</span><span class="si">}</span><span class="sb">`</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">API_URL</span><span class="p">;</span>
+<span class="w">      </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s1">&#39;Error al cargar tareas&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">tareas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+<span class="w">        </span><span class="nx">taskList</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">tareas</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">tarea</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="kd">const</span><span class="w"> </span><span class="nx">li</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;li&#39;</span><span class="p">);</span>
+<span class="w">          </span><span class="nx">li</span><span class="p">.</span><span class="nx">className</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;task-item&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nx">tarea</span><span class="p">.</span><span class="nx">completed</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39; completed&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+<span class="w">          </span><span class="nx">li</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span>
+<span class="sb">            &lt;div&gt;</span>
+<span class="sb">              &lt;strong&gt;</span><span class="si">${</span><span class="nx">tarea</span><span class="p">.</span><span class="nx">title</span><span class="si">}</span><span class="sb">&lt;/strong&gt;&lt;br&gt;</span>
+<span class="sb">              </span><span class="si">${</span><span class="nx">tarea</span><span class="p">.</span><span class="nx">description</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;Sin descripción&#39;</span><span class="si">}</span><span class="sb">&lt;br&gt;</span>
+<span class="sb">              Estado: </span><span class="si">${</span><span class="nx">tarea</span><span class="p">.</span><span class="nx">completed</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;Completada&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Pendiente&#39;</span><span class="si">}</span>
+<span class="sb">            &lt;/div&gt;</span>
+<span class="sb">            &lt;div&gt;</span>
+<span class="sb">              &lt;button onclick=&quot;prepararEdicion(</span><span class="si">${</span><span class="nx">tarea</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb">, &#39;</span><span class="si">${</span><span class="nx">tarea</span><span class="p">.</span><span class="nx">title</span><span class="si">}</span><span class="sb">&#39;, &#39;</span><span class="si">${</span><span class="nx">tarea</span><span class="p">.</span><span class="nx">description</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="si">}</span><span class="sb">&#39;, </span><span class="si">${</span><span class="nx">tarea</span><span class="p">.</span><span class="nx">completed</span><span class="si">}</span><span class="sb">)&quot;&gt;Editar&lt;/button&gt;</span>
+<span class="sb">              &lt;button onclick=&quot;eliminarTarea(</span><span class="si">${</span><span class="nx">tarea</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb">)&quot;&gt;Eliminar&lt;/button&gt;</span>
+<span class="sb">            &lt;/div&gt;</span>
+<span class="sb">          `</span><span class="p">;</span>
+<span class="w">          </span><span class="nx">taskList</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">li</span><span class="p">);</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">mostrarMensaje</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;error&#39;</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Función para crear o actualizar una tarea</span>
+<span class="w">    </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">crearOActualizarTarea</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">taskTitle</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">taskDescription</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">completed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">taskCompleted</span><span class="p">.</span><span class="nx">checked</span><span class="p">;</span>
+
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">title</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">mostrarMensaje</span><span class="p">(</span><span class="s1">&#39;El título es obligatorio&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;error&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">tarea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">title</span><span class="p">,</span><span class="w"> </span><span class="nx">description</span><span class="p">,</span><span class="w"> </span><span class="nx">completed</span><span class="w"> </span><span class="p">};</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">editingTaskId</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">API_URL</span><span class="si">}</span><span class="sb">/</span><span class="si">${</span><span class="nx">editingTaskId</span><span class="si">}</span><span class="sb">`</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">API_URL</span><span class="p">;</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">editingTaskId</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;PUT&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="p">;</span>
+
+<span class="w">      </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">method</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">          </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">tarea</span><span class="p">)</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="sb">`Error al </span><span class="si">${</span><span class="nx">editingTaskId</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;actualizar&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;crear&#39;</span><span class="si">}</span><span class="sb"> tarea`</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">limpiarFormulario</span><span class="p">();</span>
+<span class="w">        </span><span class="nx">mostrarMensaje</span><span class="p">(</span><span class="sb">`Tarea </span><span class="si">${</span><span class="nx">editingTaskId</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;actualizada&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;creada&#39;</span><span class="si">}</span><span class="sb"> con éxito`</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;success&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">cargarTareas</span><span class="p">();</span>
+<span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">mostrarMensaje</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;error&#39;</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Función para preparar la edición de una tarea</span>
+<span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">prepararEdicion</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="nx">title</span><span class="p">,</span><span class="w"> </span><span class="nx">description</span><span class="p">,</span><span class="w"> </span><span class="nx">completed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">editingTaskId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">id</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">taskTitle</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">title</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">taskDescription</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">description</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">taskCompleted</span><span class="p">.</span><span class="nx">checked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">completed</span><span class="p">;</span>
+<span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;button[onclick=&quot;crearOActualizarTarea()&quot;]&#39;</span><span class="p">).</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Actualizar Tarea&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Función para eliminar una tarea</span>
+<span class="w">    </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">eliminarTarea</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">confirm</span><span class="p">(</span><span class="s1">&#39;¿Seguro que quieres eliminar esta tarea?&#39;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">API_URL</span><span class="si">}</span><span class="sb">/</span><span class="si">${</span><span class="nx">id</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;DELETE&#39;</span>
+<span class="w">          </span><span class="p">});</span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s1">&#39;Error al eliminar tarea&#39;</span><span class="p">);</span>
+<span class="w">          </span><span class="nx">mostrarMensaje</span><span class="p">(</span><span class="s1">&#39;Tarea eliminada con éxito&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;success&#39;</span><span class="p">);</span>
+<span class="w">          </span><span class="nx">cargarTareas</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">mostrarMensaje</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;error&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Función para mostrar mensajes</span>
+<span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">mostrarMensaje</span><span class="p">(</span><span class="nx">texto</span><span class="p">,</span><span class="w"> </span><span class="nx">tipo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">mensaje</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">texto</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">mensaje</span><span class="p">.</span><span class="nx">className</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tipo</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Función para limpiar el formulario</span>
+<span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">limpiarFormulario</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">taskTitle</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">taskDescription</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">taskCompleted</span><span class="p">.</span><span class="nx">checked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">editingTaskId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;button[onclick=&quot;crearOActualizarTarea()&quot;]&#39;</span><span class="p">).</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Crear Tarea&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Actualizar tareas al cambiar el filtro</span>
+<span class="w">    </span><span class="nx">filterStatus</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;change&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">cargarTareas</span><span class="p">);</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Explicación del Ejemplo Adicional</strong>:</p>
+<ul>
+<li><strong>HTML</strong>: Agrega un <code>&lt;select&gt;</code> para filtrar tareas por estado (<code>completed</code>).</li>
+<li><strong>CSS</strong>: Mantiene el diseño responsivo y limpio, con estilos para tareas completadas.</li>
+<li><strong>JavaScript</strong>:<ul>
+<li>Filtra tareas usando el parámetro <code>completed</code> en <code>GET /tasks?completed=true</code>.</li>
+<li>Actualiza la lista de tareas dinámicamente al cambiar el filtro.</li>
+</ul>
+</li>
+<li><strong>Funcionalidad</strong>: Extiende el ejemplo anterior con un filtro por estado, demostrando cómo usar parámetros de consulta en MockAPI.io.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025 &copy; by JFVG
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs.sticky", "navigation.tabs", "navigation.top", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

@@ -1,0 +1,1531 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="jhonfvg">
+      
+      
+        <link rel="canonical" href="https://jfinfosena.github.io/25adso-js/content/curso/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>Curso de Fundamentos de JavaScript - JavaScript</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#curso-de-fundamentos-de-javascript" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="JavaScript" class="md-header__button md-logo" aria-label="JavaScript" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            JavaScript
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Curso de Fundamentos de JavaScript
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../p0/" class="md-tabs__link">
+          
+  
+    
+  
+  Contenido
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../pi/p1/" class="md-tabs__link">
+          
+  
+    
+  
+  Proyecto Integrador
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+    
+  
+  Acerca de
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="JavaScript" class="md-nav__button md-logo" aria-label="JavaScript" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg>
+
+    </a>
+    JavaScript
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Contenido
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Contenido
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción a JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tipos de datos y operadores básicos en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructuras Condicionales, Bucles e Iteraciones en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funciones en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arreglos en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guía Completa del DOM en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Métodos Asíncronos y Fetch en JavaScript con Mockoon Playground
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tutorial Completo sobre Eventos en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tutorial Completo sobre Local Storage, Session Storage y Cookies en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actividad Grupal: Consumo de API RESTful con HTML, CSS y JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actividad Grupal: Creación y Consumo de API con MockAPI.io, HTML, CSS y JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Proyecto Integrador
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Proyecto Integrador
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pi/p1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción Proyecto Integrador
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../blog/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archivo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acerca de
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#clase-1-introduccion-a-javascript-y-primeros-pasos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clase 1: Introducción a JavaScript y Primeros Pasos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clase-2-sintaxis-y-operaciones-basicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clase 2: Sintaxis y Operaciones Básicas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clase-3-control-de-flujo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clase 3: Control de Flujo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clase-4-funciones-y-reutilizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clase 4: Funciones y Reutilización
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clase-5-estructuras-de-datos-arreglos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clase 5: Estructuras de Datos: Arreglos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clase-6-estructuras-de-datos-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clase 6: Estructuras de Datos: Objetos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clase-7-introduccion-al-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clase 7: Introducción al DOM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clase-8-manejo-de-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clase 8: Manejo de Eventos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clase-9-asincronia-y-consumo-de-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clase 9: Asincronía y Consumo de APIs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clase-10-proyecto-final-y-buenas-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clase 10: Proyecto Final y Buenas Prácticas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entregables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entregables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consideraciones-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consideraciones Adicionales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rubrica-de-evaluacion-del-proyecto-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rúbrica de Evaluación del Proyecto Final
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="curso-de-fundamentos-de-javascript">Curso de Fundamentos de JavaScript</h1>
+<p>Este curso de <strong>Fundamentos de JavaScript</strong> está diseñado para principiantes sin experiencia previa en programación, con un enfoque práctico, interactivo y orientado a proyectos. Consta de <strong>10 clases</strong> de <strong>6 horas</strong> cada una, impartidas por <strong>El SENA</strong>, con el objetivo de capacitar a los estudiantes para desarrollar aplicaciones web funcionales utilizando JavaScript moderno (ES6+). A continuación, se detalla el plan completo, incluyendo objetivos, temas, metodología, actividades, distribución del tiempo, recursos y consideraciones adicionales.</p>
+<hr />
+<h2 id="clase-1-introduccion-a-javascript-y-primeros-pasos">Clase 1: Introducción a JavaScript y Primeros Pasos</h2>
+<p><strong>Objetivos</strong>  </p>
+<ul>
+<li>Comprender qué es JavaScript y su rol en el desarrollo web.  </li>
+<li>Configurar un entorno de desarrollo funcional.  </li>
+<li>Escribir y ejecutar scripts básicos en JavaScript.  </li>
+</ul>
+<p><strong>Temas</strong>  </p>
+<ul>
+<li>Introducción a JavaScript: historia, usos y aplicaciones.  </li>
+<li>Configuración del entorno: Visual Studio Code, Node.js, extensiones (Live Server, Prettier).  </li>
+<li>Primeros scripts: uso de <code>console.log</code>, <code>alert</code>.  </li>
+<li>Estructura básica de un proyecto web: HTML, CSS, JavaScript.  </li>
+</ul>
+<p><strong>Metodología</strong>  </p>
+<ul>
+<li><strong>Teoría (1.5 horas)</strong>: Presentación sobre JavaScript y demostración de configuración del entorno.  </li>
+<li><strong>Práctica (3.5 horas)</strong>: Ejercicios guiados y laboratorio para crear scripts.  </li>
+<li><strong>Revisión (1 hora)</strong>: Resolución de dudas, discusión grupal y retroalimentación.  </li>
+</ul>
+<p><strong>Actividades Prácticas</strong><br />
+1. Instalar y configurar VS Code y Node.js.<br />
+2. Crear un script que imprima "¡Hola, mundo!" en la consola y en una ventana emergente.<br />
+3. Modificar un archivo HTML para incluir un script JavaScript que muestre un mensaje.<br />
+4. <strong>Mini-proyecto</strong>: Crear una página web que muestre un saludo personalizado basado en un nombre ingresado en un <code>prompt</code>.  </p>
+<p><strong>Distribución del Tiempo</strong>  </p>
+<ul>
+<li>Teoría: 1.5 horas (presentación y demo).  </li>
+<li>Práctica: 3.5 horas (configuración: 1 hora, ejercicios: 1.5 horas, mini-proyecto: 1 hora).  </li>
+<li>Revisión: 1 hora (dudas y retroalimentación).  </li>
+</ul>
+<p><strong>Recursos</strong>  </p>
+<ul>
+<li>Herramientas: Visual Studio Code, Node.js, navegador (Chrome/Firefox).  </li>
+<li>Materiales: Diapositivas introductorias, guía de instalación en PDF, plantilla HTML/CSS.  </li>
+<li>Referencias: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript">MDN Web Docs - JavaScript</a>, <a href="https://javascript.info/intro">JavaScript.info - Introducción</a>.  </li>
+</ul>
+<hr />
+<h2 id="clase-2-sintaxis-y-operaciones-basicas">Clase 2: Sintaxis y Operaciones Básicas</h2>
+<p><strong>Objetivos</strong>  </p>
+<ul>
+<li>Dominar los tipos de datos y operadores básicos en JavaScript.  </li>
+<li>Utilizar entrada de usuario con <code>prompt</code>.  </li>
+<li>Crear scripts interactivos en la consola.  </li>
+</ul>
+<p><strong>Temas</strong>  </p>
+<ul>
+<li>Tipos de datos: <code>string</code>, <code>number</code>, <code>boolean</code>, <code>null</code>, <code>undefined</code>.  </li>
+<li>Declaración de variables: <code>let</code>, <code>const</code>, <code>var</code>.  </li>
+<li>Operadores: aritméticos (+, -, *, /, %), comparación (==, ===, !=), lógicos (&amp;&amp;, ||, !).  </li>
+<li>Entrada de usuario con <code>prompt</code> y conversión de tipos.  </li>
+</ul>
+<p><strong>Metodología</strong>  </p>
+<ul>
+<li><strong>Teoría (1.5 horas)</strong>: Explicación de tipos de datos y operadores con ejemplos en vivo.  </li>
+<li><strong>Práctica (3.5 horas)</strong>: Ejercicios guiados y laboratorio para manipular variables.  </li>
+<li><strong>Revisión (1 hora)</strong>: Corrección de ejercicios y discusión grupal.  </li>
+</ul>
+<p><strong>Actividades Prácticas</strong><br />
+1. Declarar variables de diferentes tipos y mostrarlas en la consola.<br />
+2. Crear un programa que realice operaciones aritméticas con dos números ingresados por el usuario.<br />
+3. Comparar dos valores ingresados con <code>prompt</code> y mostrar si son iguales o diferentes.<br />
+4. <strong>Mini-proyecto</strong>: Calculadora interactiva en la consola que realice suma, resta, multiplicación y división según la elección del usuario.  </p>
+<p><strong>Distribución del Tiempo</strong>  </p>
+<ul>
+<li>Teoría: 1.5 horas (explicación y ejemplos).  </li>
+<li>Práctica: 3.5 horas (ejercicios: 2 horas, mini-proyecto: 1.5 horas).  </li>
+<li>Revisión: 1 hora (corrección y dudas).  </li>
+</ul>
+<p><strong>Recursos</strong>  </p>
+<ul>
+<li>Herramientas: VS Code, Node.js, navegador.  </li>
+<li>Materiales: Diapositivas sobre sintaxis, ejemplos de código comentados, guía de operadores.  </li>
+<li>Referencias: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Data_structures">MDN - Tipos de datos</a>, <a href="https://javascript.info/variables">JavaScript.info - Variables</a>.  </li>
+</ul>
+<hr />
+<h2 id="clase-3-control-de-flujo">Clase 3: Control de Flujo</h2>
+<p><strong>Objetivos</strong>  </p>
+<ul>
+<li>Implementar estructuras condicionales y bucles para controlar el flujo de un programa.  </li>
+<li>Resolver problemas lógicos con estructuras de control.  </li>
+<li>Crear programas interactivos con lógica condicional.  </li>
+</ul>
+<p><strong>Temas</strong>  </p>
+<ul>
+<li>Condicionales: <code>if</code>, <code>else if</code>, <code>else</code>, <code>switch</code>.  </li>
+<li>Bucles: <code>for</code>, <code>while</code>, <code>do-while</code>.  </li>
+<li>Instrucciones: <code>break</code>, <code>continue</code>.  </li>
+<li>Anidación de condicionales y bucles.  </li>
+</ul>
+<p><strong>Metodología</strong>  </p>
+<ul>
+<li><strong>Teoría (1.5 horas)</strong>: Explicación de estructuras de control con diagramas y ejemplos en vivo.  </li>
+<li><strong>Práctica (3.5 horas)</strong>: Ejercicios guiados y laboratorio colaborativo.  </li>
+<li><strong>Revisión (1 hora)</strong>: Resolución de ejercicios y discusión en grupo.  </li>
+</ul>
+<p><strong>Actividades Prácticas</strong><br />
+1. Crear un programa que determine si un número es par o impar usando <code>if</code>.<br />
+2. Usar un bucle <code>for</code> para imprimir los números del 1 al 10.<br />
+3. Implementar un juego de adivinar un número (el usuario ingresa un número hasta acertar).<br />
+4. <strong>Mini-proyecto</strong>: Generador de tablas de multiplicación que muestre la tabla de un número ingresado por el usuario.  </p>
+<p><strong>Distribución del Tiempo</strong>  </p>
+<ul>
+<li>Teoría: 1.5 horas (explicación y demo).  </li>
+<li>Práctica: 3.5 horas (ejercicios: 2 horas, mini-proyecto: 1.5 horas).  </li>
+<li>Revisión: 1 hora (corrección y dudas).  </li>
+</ul>
+<p><strong>Recursos</strong></p>
+<ul>
+<li>Herramientas: VS Code, navegador.  </li>
+<li>Materiales: Diapositivas sobre control de flujo, ejemplos de código, guía de bucles.  </li>
+<li>Referencias: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Control_flow_and_error_handling">MDN - Estructuras de control</a>, <a href="https://javascript.info/while-for">JavaScript.info - Bucles</a>.  </li>
+</ul>
+<hr />
+<h2 id="clase-4-funciones-y-reutilizacion">Clase 4: Funciones y Reutilización</h2>
+<p><strong>Objetivos</strong> </p>
+<ul>
+<li>Definir y utilizar funciones para modularizar código.  </li>
+<li>Comprender el concepto de parámetros y retorno.  </li>
+<li>Aplicar funciones en problemas prácticos.  </li>
+</ul>
+<p><strong>Temas</strong>  </p>
+<ul>
+<li>Declaración de funciones: <code>function</code>, expresiones de función, arrow functions.  </li>
+<li>Parámetros: valores por defecto, rest parameters.  </li>
+<li>Retorno de valores y ámbito (<code>scope</code>).  </li>
+<li>Llamadas a funciones y reutilización de código.  </li>
+</ul>
+<p><strong>Metodología</strong>  </p>
+<ul>
+<li><strong>Teoría (1.5 horas)</strong>: Explicación de funciones con ejemplos prácticos.  </li>
+<li><strong>Práctica (3.5 horas)</strong>: Ejercicios guiados y laboratorio en grupos pequeños.  </li>
+<li><strong>Revisión (1 hora)</strong>: Corrección de ejercicios y retroalimentación.  </li>
+</ul>
+<p><strong>Actividades Prácticas</strong>  </p>
+<ol>
+<li>Crear una función que calcule el cuadrado de un número.  </li>
+<li>Escribir una función que valide si una cadena es vacía o no.  </li>
+<li>Implementar una función que reciba dos números y devuelva el mayor.  </li>
+<li><strong>Mini-proyecto</strong>: Conversor de unidades (temperatura: Celsius a Fahrenheit, o moneda: pesos a dólares) usando funciones.  </li>
+</ol>
+<p><strong>Distribución del Tiempo</strong>  </p>
+<ul>
+<li>Teoría: 1.5 horas (explicación y demo).  </li>
+<li>Práctica: 3.5 horas (ejercicios: 2 horas, mini-proyecto: 1.5 horas).  </li>
+<li>Revisión: 1 hora (corrección y dudas).  </li>
+</ul>
+<p><strong>Recursos</strong>  </p>
+<ul>
+<li>Herramientas: VS Code, navegador.  </li>
+<li>Materiales: Diapositivas sobre funciones, ejemplos de código, guía de parámetros.  </li>
+<li>Referencias: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Functions">MDN - Funciones</a>, <a href="https://javascript.info/function-basics">JavaScript.info - Funciones</a>.  </li>
+</ul>
+<hr />
+<h2 id="clase-5-estructuras-de-datos-arreglos">Clase 5: Estructuras de Datos: Arreglos</h2>
+<p><strong>Objetivos</strong>  </p>
+<ul>
+<li>Manipular arreglos para almacenar y procesar datos.  </li>
+<li>Utilizar métodos de arreglos para operaciones comunes.  </li>
+<li>Crear programas que gestionen listas de datos.  </li>
+</ul>
+<p><strong>Temas</strong>  </p>
+<ul>
+<li>Creación y acceso a arreglos.  </li>
+<li>Métodos: <code>push</code>, <code>pop</code>, <code>shift</code>, <code>unshift</code>, <code>slice</code>, <code>forEach</code>, <code>map</code>.  </li>
+<li>Iteración sobre arreglos: bucles y métodos funcionales.  </li>
+<li>Arreglos multidimensionales (básico).  </li>
+</ul>
+<p><strong>Metodología</strong>  </p>
+<ul>
+<li><strong>Teoría (1.5 horas)</strong>: Explicación de arreglos y métodos con ejemplos en vivo.  </li>
+<li><strong>Práctica (3.5 horas)</strong>: Ejercicios guiados y laboratorio colaborativo.  </li>
+<li><strong>Revisión (1 hora)</strong>: Resolución de ejercicios y discusión grupal.  </li>
+</ul>
+<p><strong>Actividades Prácticas</strong>  </p>
+<ol>
+<li>Crear un arreglo de nombres y mostrarlos en la consola usando <code>forEach</code>.  </li>
+<li>Filtrar un arreglo de números para mostrar solo los mayores a 10.  </li>
+<li>Usar <code>map</code> para duplicar los valores de un arreglo numérico.  </li>
+<li><strong>Mini-proyecto</strong>: Lista de compras con funciones CRUD (crear, leer, actualizar, eliminar) usando arreglos.  </li>
+</ol>
+<p><strong>Distribución del Tiempo</strong>  </p>
+<ul>
+<li>Teoría: 1.5 horas (explicación y demo).  </li>
+<li>Práctica: 3.5 horas (ejercicios: 2 horas, mini-proyecto: 1.5 horas).  </li>
+<li>Revisión: 1 hora (corrección y dudas).  </li>
+</ul>
+<p><strong>Recursos</strong>  </p>
+<ul>
+<li>Herramientas: VS Code, navegador.  </li>
+<li>Materiales: Diapositivas sobre arreglos, ejemplos de código, guía de métodos.  </li>
+<li>Referencias: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array">MDN - Arreglos</a>, <a href="https://javascript.info/array">JavaScript.info - Arreglos</a>.  </li>
+</ul>
+<hr />
+<h2 id="clase-6-estructuras-de-datos-objetos">Clase 6: Estructuras de Datos: Objetos</h2>
+<p><strong>Objetivos</strong>  </p>
+<ul>
+<li>Crear y manipular objetos para estructurar datos complejos.  </li>
+<li>Comprender el formato JSON y su uso.  </li>
+<li>Desarrollar aplicaciones que gestionen datos estructurados.  </li>
+</ul>
+<p><strong>Temas</strong>  </p>
+<ul>
+<li>Creación de objetos: propiedades, métodos.  </li>
+<li>Acceso a propiedades: notación de punto y corchetes.  </li>
+<li>Objetos anidados y JSON.  </li>
+<li>Iteración sobre objetos: <code>for...in</code>, <code>Object.keys</code>.  </li>
+</ul>
+<p><strong>Metodología</strong>  </p>
+<ul>
+<li><strong>Teoría (1.5 horas)</strong>: Explicación de objetos y JSON con ejemplos prácticos.  </li>
+<li><strong>Práctica (3.5 horas)</strong>: Ejercicios guiados y laboratorio en grupos.  </li>
+<li><strong>Revisión (1 hora)</strong>: Corrección de ejercicios y retroalimentación.  </li>
+</ul>
+<p><strong>Actividades Prácticas</strong>  </p>
+<ol>
+<li>Crear un objeto que represente un estudiante (nombre, edad, notas).  </li>
+<li>Modificar propiedades de un objeto basado en entrada del usuario.  </li>
+<li>Convertir un objeto a JSON y mostrarlo en la consola.  </li>
+<li><strong>Mini-proyecto</strong>: Simulador de agenda personal que permita agregar y mostrar eventos (fecha, descripción).  </li>
+</ol>
+<p><strong>Distribución del Tiempo</strong>  </p>
+<ul>
+<li>Teoría: 1.5 horas (explicación y demo).  </li>
+<li>Práctica: 3.5 horas (ejercicios: 2 horas, mini-proyecto: 1.5 horas).  </li>
+<li>Revisión: 1 hora (corrección y dudas).  </li>
+</ul>
+<p><strong>Recursos</strong>  </p>
+<ul>
+<li>Herramientas: VS Code, navegador.  </li>
+<li>Materiales: Diapositivas sobre objetos, ejemplos de código, guía de JSON.  </li>
+<li>Referencias: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Working_with_Objects">MDN - Objetos</a>, <a href="https://javascript.info/object">JavaScript.info - Objetos</a>.  </li>
+</ul>
+<hr />
+<h2 id="clase-7-introduccion-al-dom">Clase 7: Introducción al DOM</h2>
+<p><strong>Objetivos</strong> </p>
+<ul>
+<li>Acceder y modificar elementos HTML mediante el DOM.  </li>
+<li>Crear interfaces web dinámicas.  </li>
+<li>Integrar JavaScript con HTML y CSS.  </li>
+</ul>
+<p><strong>Temas</strong>  </p>
+<ul>
+<li>Qué es el DOM y su estructura.  </li>
+<li>Métodos: <code>getElementById</code>, <code>querySelector</code>, <code>querySelectorAll</code>.  </li>
+<li>Modificación: <code>innerHTML</code>, <code>textContent</code>, <code>style</code>.  </li>
+<li>Creación y eliminación de elementos: <code>createElement</code>, <code>appendChild</code>, <code>remove</code>.  </li>
+</ul>
+<p><strong>Metodología</strong>  </p>
+<ul>
+<li><strong>Teoría (1.5 horas)</strong>: Explicación del DOM con demostraciones en vivo.  </li>
+<li><strong>Práctica (3.5 horas)</strong>: Ejercicios guiados y laboratorio colaborativo.  </li>
+<li><strong>Revisión (1 hora)</strong>: Resolución de ejercicios y discusión grupal.  </li>
+</ul>
+<p><strong>Actividades Prácticas</strong><br />
+1. Cambiar el texto de un elemento HTML usando <code>innerHTML</code>.<br />
+2. Modificar el color de fondo de una página al hacer clic en un botón.<br />
+3. Crear una lista dinámica a partir de un arreglo.<br />
+4. <strong>Mini-proyecto</strong>: Generador de tarjetas dinámicas que muestre información de productos (nombre, precio, descripción).  </p>
+<p><strong>Distribución del Tiempo</strong>  </p>
+<ul>
+<li>Teoría: 1.5 horas (explicación y demo).  </li>
+<li>Práctica: 3.5 horas (ejercicios: 2 horas, mini-proyecto: 1.5 horas).  </li>
+<li>Revisión: 1 hora (corrección y dudas).  </li>
+</ul>
+<p><strong>Recursos</strong>  </p>
+<ul>
+<li>Herramientas: VS Code, navegador.  </li>
+<li>Materiales: Diapositivas sobre el DOM, plantilla HTML/CSS, ejemplos de código.  </li>
+<li>Referencias: <a href="https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model">MDN - DOM</a>, <a href="https://javascript.info/dom-nodes">JavaScript.info - DOM</a>.  </li>
+</ul>
+<hr />
+<h2 id="clase-8-manejo-de-eventos">Clase 8: Manejo de Eventos</h2>
+<p><strong>Objetivos</strong> </p>
+<ul>
+<li>Implementar eventos para crear aplicaciones interactivas.  </li>
+<li>Utilizar <code>addEventListener</code> para manejar interacciones del usuario.  </li>
+<li>Validar entradas en formularios dinámicos.  </li>
+</ul>
+<p><strong>Temas</strong>  </p>
+<ul>
+<li>Introducción a eventos: <code>click</code>, <code>input</code>, <code>submit</code>, <code>keydown</code>.  </li>
+<li>Uso de <code>addEventListener</code> y funciones callback.  </li>
+<li>Propagación de eventos: bubbling y capturing (básico).  </li>
+<li>Prevención de comportamiento por defecto: <code>preventDefault</code>.  </li>
+</ul>
+<p><strong>Metodología</strong>  </p>
+<ul>
+<li><strong>Teoría (1.5 horas)</strong>: Explicación de eventos con ejemplos en vivo.  </li>
+<li><strong>Práctica (3.5 horas)</strong>: Ejercicios guiados y laboratorio en grupos pequeños.  </li>
+<li><strong>Revisión (1 hora)</strong>: Corrección de ejercicios y retroalimentación.  </li>
+</ul>
+<p><strong>Actividades Prácticas</strong><br />
+1. Crear un botón que muestre un mensaje al hacer clic.<br />
+2. Implementar un campo de texto que muestre su contenido en tiempo real.<br />
+3. Validar un formulario para asegurar que no esté vacío.<br />
+4. <strong>Mini-proyecto</strong>: Formulario dinámico con validación en tiempo real (ej. verificar longitud de contraseña, formato de correo).  </p>
+<p><strong>Distribución del Tiempo</strong> </p>
+<ul>
+<li>Teoría: 1.5 horas (explicación y demo).  </li>
+<li>Práctica: 3.5 horas (ejercicios: 2 horas, mini-proyecto: 1.5 horas).  </li>
+<li>Revisión: 1 hora (corrección y dudas).  </li>
+</ul>
+<p><strong>Recursos</strong>  </p>
+<ul>
+<li>Herramientas: VS Code, navegador.  </li>
+<li>Materiales: Diapositivas sobre eventos, plantilla HTML/CSS, ejemplos de código.  </li>
+<li>Referencias: <a href="https://developer.mozilla.org/es/docs/Web/Events">MDN - Eventos</a>, <a href="https://javascript.info/introduction-browser-events">JavaScript.info - Eventos</a>.  </li>
+</ul>
+<hr />
+<h2 id="clase-9-asincronia-y-consumo-de-apis">Clase 9: Asincronía y Consumo de APIs</h2>
+<p><strong>Objetivos</strong>  </p>
+<ul>
+<li>Comprender los conceptos de asincronía en JavaScript.  </li>
+<li>Consumir APIs públicas usando <code>fetch</code> y <code>async/await</code>.  </li>
+<li>Mostrar datos dinámicamente en una página web.  </li>
+</ul>
+<p><strong>Temas</strong>  </p>
+<ul>
+<li>Introducción a asincronía: callbacks, promesas, <code>async/await</code>.  </li>
+<li>Uso de <code>fetch</code> para realizar solicitudes HTTP.  </li>
+<li>Manejo de errores con <code>try/catch</code>.  </li>
+<li>Consumo de APIs públicas: PokeAPI, OpenWeather.  </li>
+</ul>
+<p><strong>Metodología</strong>  </p>
+<ul>
+<li><strong>Teoría (1.5 horas)</strong>: Explicación de asincronía y APIs con demostraciones en vivo.  </li>
+<li><strong>Práctica (3.5 horas)</strong>: Ejercicios guiados y laboratorio colaborativo.  </li>
+<li><strong>Revisión (1 hora)</strong>: Resolución de ejercicios y discusión grupal.  </li>
+</ul>
+<p><strong>Actividades Prácticas</strong><br />
+1. Crear una función asíncrona que espere 2 segundos antes de mostrar un mensaje.<br />
+2. Consumir PokeAPI para mostrar el nombre de un Pokémon en la consola.<br />
+3. Mostrar una lista de datos de una API en una tabla HTML.<br />
+4. <strong>Mini-proyecto</strong>: Aplicación de clima (usando OpenWeather) o galería de Pokémon (usando PokeAPI) que muestre datos dinámicos.  </p>
+<p><strong>Distribución del Tiempo</strong>  </p>
+<ul>
+<li>Teoría: 1.5 horas (explicación y demo).  </li>
+<li>Práctica: 3.5 horas (ejercicios: 2 horas, mini-proyecto: 1.5 horas).  </li>
+<li>Revisión: 1 hora (corrección y dudas).  </li>
+</ul>
+<p><strong>Recursos</strong>  </p>
+<ul>
+<li>Herramientas: VS Code, navegador.  </li>
+<li>Materiales: Diapositivas sobre asincronía, ejemplos de código, guía de <code>fetch</code>.  </li>
+<li>Referencias: <a href="https://developer.mozilla.org/es/docs/Web/API/Fetch_API">MDN - Fetch API</a>, <a href="https://javascript.info/async-await">JavaScript.info - Async/Await</a>.  </li>
+</ul>
+<hr />
+<h2 id="clase-10-proyecto-final-y-buenas-practicas">Clase 10: Proyecto Final y Buenas Prácticas</h2>
+<p><strong>Objetivos</strong>  </p>
+<ul>
+<li>Integrar todos los conceptos aprendidos en un proyecto completo.  </li>
+<li>Aplicar buenas prácticas de codificación.  </li>
+<li>Presentar y evaluar proyectos en grupo.  </li>
+</ul>
+<p><strong>Temas</strong>  </p>
+<ul>
+<li>Repaso de conceptos: DOM, eventos, arreglos, objetos, APIs.  </li>
+<li>Buenas prácticas: nombrado claro, comentarios, modularización.  </li>
+<li>Organización de proyectos: estructura de archivos, reutilización de código.  </li>
+<li>Depuración básica: uso de la consola y <code>debugger</code>.  </li>
+</ul>
+<p><strong>Metodología</strong>  </p>
+<ul>
+<li><strong>Teoría (1 hora)</strong>: Repaso de conceptos y explicación de buenas prácticas.  </li>
+<li><strong>Práctica (4 horas)</strong>: Desarrollo del proyecto final en grupos pequeños.  </li>
+<li><strong>Revisión (1 hora)</strong>: Presentación de proyectos y retroalimentación grupal.  </li>
+</ul>
+<p><strong>Actividades Prácticas</strong>  </p>
+<ol>
+<li>Refactorizar un código desordenado aplicando buenas prácticas.  </li>
+<li>Crear un módulo reusable para una función común (ej. validación de formularios).  </li>
+<li>Depurar un programa con errores usando la consola.  </li>
+<li>
+<p><strong>Proyecto final</strong>: Desarrollo de una aplicación web, como:  </p>
+<ul>
+<li>Administrador de tareas (crear, editar, eliminar tareas).  </li>
+<li>Tienda simple (mostrar productos, agregar al carrito).  </li>
+<li>Blog interactivo (publicar y mostrar entradas).  </li>
+<li>La aplicación debe integrar DOM, eventos, arreglos, objetos y consumo de una API.  </li>
+</ul>
+</li>
+</ol>
+<p><strong>Distribución del Tiempo</strong>  </p>
+<ul>
+<li>Teoría: 1 hora (repaso y buenas prácticas).  </li>
+<li>Práctica: 4 horas (ejercicios: 1 hora, proyecto final: 3 horas).  </li>
+<li>Revisión: 1 hora (presentaciones y retroalimentación).  </li>
+</ul>
+<p><strong>Recursos</strong>  </p>
+<ul>
+<li>Herramientas: VS Code, navegador.  </li>
+<li>Materiales: Diapositivas sobre buenas prácticas, plantilla de proyecto, rúbrica de evaluación.  </li>
+<li>Referencias: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide">MDN - Buenas prácticas</a>, <a href="https://javascript.info/code-structure">JavaScript.info - Estructura de código</a>.  </li>
+</ul>
+<hr />
+<h2 id="entregables">Entregables</h2>
+<ul>
+<li><strong>Plan detallado</strong>: Documento Markdown con las 10 clases, incluyendo objetivos, temas, actividades, distribución del tiempo y recursos.  </li>
+<li><strong>Materiales de apoyo</strong>:  <ul>
+<li>Diapositivas para cada clase (formato PPT o PDF).  </li>
+<li>Ejemplos de código comentados (archivos JS, HTML, CSS).  </li>
+<li>Guías en PDF: instalación, sintaxis, DOM, eventos, APIs.  </li>
+<li>Enlaces a recursos externos: MDN Web Docs, JavaScript.info, freeCodeCamp.  </li>
+</ul>
+</li>
+<li><strong>Proyecto final</strong>:  <ul>
+<li>Descripción del proyecto con requisitos claros (integrar DOM, eventos, arreglos, objetos, API).  </li>
+<li>Rúbrica de evaluación: funcionalidad (40%), código limpio (30%), creatividad (20%), presentación (10%).  </li>
+</ul>
+</li>
+<li><strong>Plantillas</strong>: Archivos base (HTML, CSS, JS) para ejercicios y proyectos.  </li>
+</ul>
+<hr />
+<h2 id="consideraciones-adicionales">Consideraciones Adicionales</h2>
+<ul>
+<li><strong>Ejercicios motivadores</strong>: Los proyectos están diseñados para ser relevantes (ej. aplicaciones para pequeñas empresas, herramientas educativas) y escalables según el nivel del estudiante.  </li>
+<li><strong>Demostraciones en vivo</strong>: Cada clase incluye ejemplos prácticos ejecutados por el instructor para aclarar conceptos complejos como el DOM o la asincronía.  </li>
+<li><strong>Trabajo colaborativo</strong>: Las clases 5 y 9 incluyen actividades en grupos pequeños para fomentar el aprendizaje en equipo.  </li>
+<li><strong>Escalabilidad</strong>: Los mini-proyectos ofrecen opciones avanzadas (ej. agregar estilos CSS, incluir más validaciones) para estudiantes con mayor rapidez.  </li>
+<li><strong>Plantillas de código</strong>: Se proporcionan archivos base para los principiantes, pero los ejercicios fomentan escribir código desde cero para reforzar el aprendizaje.  </li>
+<li><strong>Evaluación formativa</strong>: Los ejercicios prácticos se revisan en cada clase, con autoevaluaciones opcionales para que los estudiantes reflexionen sobre su progreso.  </li>
+</ul>
+<hr />
+<h2 id="rubrica-de-evaluacion-del-proyecto-final">Rúbrica de Evaluación del Proyecto Final</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Criterio</strong></th>
+<th><strong>Peso</strong></th>
+<th><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Funcionalidad</strong></td>
+<td>40%</td>
+<td>La aplicación cumple con los requisitos (DOM, eventos, arreglos, objetos, API).</td>
+</tr>
+<tr>
+<td><strong>Código limpio</strong></td>
+<td>30%</td>
+<td>Uso de nombres claros, comentarios, modularización y buenas prácticas.</td>
+</tr>
+<tr>
+<td><strong>Creatividad</strong></td>
+<td>20%</td>
+<td>Diseño visual atractivo, funcionalidades adicionales o enfoques innovadores.</td>
+</tr>
+<tr>
+<td><strong>Presentación</strong></td>
+<td>10%</td>
+<td>Explicación clara del proyecto, demostración funcional y respuestas a preguntas.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>Este curso proporciona una base sólida en JavaScript, preparando a los estudiantes para desarrollar aplicaciones web interactivas y avanzar en su aprendizaje hacia tecnologías más avanzadas.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025 &copy; by JFVG
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs.sticky", "navigation.tabs", "navigation.top", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
