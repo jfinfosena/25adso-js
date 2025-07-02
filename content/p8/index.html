@@ -1,0 +1,2093 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="jhonfvg">
+      
+      
+        <link rel="canonical" href="https://jfinfosena.github.io/25adso-js/content/p8/">
+      
+      
+        <link rel="prev" href="../p7/">
+      
+      
+        <link rel="next" href="../p9/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>Tutorial Completo sobre Local Storage, Session Storage y Cookies en JavaScript - JavaScript</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tutorial-completo-sobre-local-storage-session-storage-y-cookies-en-javascript" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="JavaScript" class="md-header__button md-logo" aria-label="JavaScript" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            JavaScript
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tutorial Completo sobre Local Storage, Session Storage y Cookies en JavaScript
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../p0/" class="md-tabs__link">
+          
+  
+    
+  
+  Contenido
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../pi/p1/" class="md-tabs__link">
+          
+  
+    
+  
+  Proyecto Integrador
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+    
+  
+  Acerca de
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="JavaScript" class="md-nav__button md-logo" aria-label="JavaScript" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215m-6.56 0a.75.75 0 0 1 1.042.018.75.75 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"/></svg>
+
+    </a>
+    JavaScript
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Contenido
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Contenido
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción a JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tipos de datos y operadores básicos en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructuras Condicionales, Bucles e Iteraciones en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funciones en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arreglos en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guía Completa del DOM en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Métodos Asíncronos y Fetch en JavaScript con Mockoon Playground
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tutorial Completo sobre Eventos en JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tutorial Completo sobre Local Storage, Session Storage y Cookies en JavaScript
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Tutorial Completo sobre Local Storage, Session Storage y Cookies en JavaScript
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-el-almacenamiento-en-el-navegador" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es el Almacenamiento en el Navegador?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparacion-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparación General
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-local-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Local Storage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Local Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-de-la-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Métodos de la API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-1-guardar-y-recuperar-preferencias-de-tema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo 1: Guardar y Recuperar Preferencias de Tema
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-session-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Session Storage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Session Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-de-la-api_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Métodos de la API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-2-guardar-estado-de-formulario-en-una-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo 2: Guardar Estado de Formulario en una Sesión
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-cookies" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Cookies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Cookies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-y-propiedades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Métodos y Propiedades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atributos-de-cookies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atributos de Cookies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-3-gestionar-cookies-para-un-contador-de-visitas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo 3: Gestionar Cookies para un Contador de Visitas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-combinado-lista-de-tareas-con-local-storage-session-storage-y-cookies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo Combinado: Lista de Tareas con Local Storage, Session Storage y Cookies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitaciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Storage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Storage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cookies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cookies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consideraciones-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consideraciones de Seguridad
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buenas-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buenas Prácticas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-avanzados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Casos de Uso Avanzados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Casos de Uso Avanzados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-sincronizacion-offline" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Sincronización Offline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cache-de-recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Cache de Recursos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-gestion-de-sesiones-con-cookies" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Gestión de Sesiones con Cookies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actividad Grupal: Consumo de API RESTful con HTML, CSS y JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Actividad Grupal: Creación y Consumo de API con MockAPI.io, HTML, CSS y JavaScript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Proyecto Integrador
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Proyecto Integrador
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pi/p1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción Proyecto Integrador
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../blog/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archivo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acerca de
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-el-almacenamiento-en-el-navegador" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es el Almacenamiento en el Navegador?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparacion-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparación General
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-local-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Local Storage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Local Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-de-la-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Métodos de la API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-1-guardar-y-recuperar-preferencias-de-tema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo 1: Guardar y Recuperar Preferencias de Tema
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-session-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Session Storage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Session Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-de-la-api_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Métodos de la API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-2-guardar-estado-de-formulario-en-una-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo 2: Guardar Estado de Formulario en una Sesión
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-cookies" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Cookies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Cookies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descripcion_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descripción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-y-propiedades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Métodos y Propiedades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atributos-de-cookies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atributos de Cookies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-3-gestionar-cookies-para-un-contador-de-visitas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo 3: Gestionar Cookies para un Contador de Visitas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-combinado-lista-de-tareas-con-local-storage-session-storage-y-cookies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo Combinado: Lista de Tareas con Local Storage, Session Storage y Cookies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitaciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Storage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Storage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cookies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cookies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consideraciones-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consideraciones de Seguridad
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buenas-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buenas Prácticas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-avanzados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Casos de Uso Avanzados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Casos de Uso Avanzados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-sincronizacion-offline" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Sincronización Offline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cache-de-recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Cache de Recursos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-gestion-de-sesiones-con-cookies" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Gestión de Sesiones con Cookies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="tutorial-completo-sobre-local-storage-session-storage-y-cookies-en-javascript">Tutorial Completo sobre Local Storage, Session Storage y Cookies en JavaScript</h1>
+<h2 id="introduccion">Introducción</h2>
+<p>El almacenamiento en el navegador permite a las aplicaciones web guardar datos en el lado del cliente, mejorando la experiencia del usuario al persistir información como preferencias, estados de la aplicación o datos temporales. Este tutorial explora en detalle tres tecnologías principales de almacenamiento en el navegador: <strong>Local Storage</strong>, <strong>Session Storage</strong> y <strong>Cookies</strong>. Cada una tiene características únicas, casos de uso específicos y limitaciones. A través de explicaciones detalladas y ejemplos prácticos, aprenderás cómo usar estas herramientas en JavaScript, cuándo elegir cada una y cómo implementarlas de manera eficiente y segura.</p>
+<hr />
+<h2 id="que-es-el-almacenamiento-en-el-navegador">¿Qué es el Almacenamiento en el Navegador?</h2>
+<p>El almacenamiento en el navegador permite guardar datos en el dispositivo del usuario para que las aplicaciones web puedan acceder a ellos sin necesidad de un servidor. Las tres tecnologías principales son:</p>
+<ul>
+<li><strong>Local Storage</strong>: Almacena datos de forma persistente sin fecha de caducidad, accesibles hasta que se eliminen manualmente.</li>
+<li><strong>Session Storage</strong>: Almacena datos solo durante la duración de una pestaña del navegador, eliminándose al cerrar la pestaña.</li>
+<li><strong>Cookies</strong>: Pequeños fragmentos de datos enviados al servidor en cada solicitud HTTP, con opciones de caducidad y configuraciones de seguridad.</li>
+</ul>
+<p>Estas tecnologías forman parte de la <strong>API Web Storage</strong> (para Local Storage y Session Storage) y de la gestión de cookies a través del objeto <code>document.cookie</code>. A continuación, se detalla cada una, sus métodos, ejemplos prácticos y mejores prácticas.</p>
+<hr />
+<h2 id="comparacion-general">Comparación General</h2>
+<p>Antes de profundizar, aquí tienes una comparación para entender las diferencias clave:</p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Local Storage</th>
+<th>Session Storage</th>
+<th>Cookies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Persistencia</strong></td>
+<td>Persiste hasta eliminación manual</td>
+<td>Dura hasta cerrar la pestaña</td>
+<td>Configurable (sesión o fecha específica)</td>
+</tr>
+<tr>
+<td><strong>Capacidad</strong></td>
+<td>5-10 MB</td>
+<td>5-10 MB</td>
+<td>~4 KB por cookie, ~50 cookies por dominio</td>
+</tr>
+<tr>
+<td><strong>Acceso</strong></td>
+<td>Solo cliente (JavaScript)</td>
+<td>Solo cliente (JavaScript)</td>
+<td>Cliente y servidor (enviadas en headers HTTP)</td>
+</tr>
+<tr>
+<td><strong>API</strong></td>
+<td>Simple (clave-valor)</td>
+<td>Simple (clave-valor)</td>
+<td>Compleja (parsing manual)</td>
+</tr>
+<tr>
+<td><strong>Uso típico</strong></td>
+<td>Preferencias, estados persistentes</td>
+<td>Estados temporales</td>
+<td>Autenticación, seguimiento</td>
+</tr>
+<tr>
+<td><strong>Soporte HTTPS</strong></td>
+<td>No requiere configuración especial</td>
+<td>No requiere configuración especial</td>
+<td>Requiere <code>Secure</code> para HTTPS</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cuándo usar cada una:</strong></p>
+<ul>
+<li><strong>Local Storage</strong>: Para datos persistentes como configuraciones de usuario o estados de aplicaciones sin backend.</li>
+<li><strong>Session Storage</strong>: Para datos temporales, como formularios en una sola sesión o estados de navegación.</li>
+<li><strong>Cookies</strong>: Para datos que deben enviarse al servidor, como tokens de autenticación o seguimiento de sesiones.</li>
+</ul>
+<hr />
+<h2 id="1-local-storage">1. Local Storage</h2>
+<h3 id="descripcion">Descripción</h3>
+<p>Local Storage forma parte de la API Web Storage y permite almacenar datos en formato clave-valor como cadenas de texto. Los datos persisten indefinidamente, incluso después de cerrar el navegador, hasta que se eliminan manualmente. Es ideal para guardar preferencias de usuario, datos de formularios o estados de aplicaciones.</p>
+<h3 id="metodos-de-la-api">Métodos de la API</h3>
+<p>El objeto global <code>localStorage</code> proporciona los siguientes métodos:</p>
+<ul>
+<li><strong><code>setItem(clave, valor)</code></strong>: Guarda un valor asociado a una clave.</li>
+<li><strong><code>getItem(clave)</code></strong>: Recupera el valor de una clave. Devuelve <code>null</code> si no existe.</li>
+<li><strong><code>removeItem(clave)</code></strong>: Elimina una clave específica.</li>
+<li><strong><code>clear()</code></strong>: Elimina todos los datos de Local Storage para el dominio.</li>
+<li><strong><code>key(indice)</code></strong>: Devuelve la clave en la posición especificada.</li>
+<li><strong>Propiedad <code>length</code></strong>: Indica el número de pares clave-valor almacenados.</li>
+</ul>
+<h3 id="ejemplo-1-guardar-y-recuperar-preferencias-de-tema">Ejemplo 1: Guardar y Recuperar Preferencias de Tema</h3>
+<p>Este ejemplo permite al usuario alternar entre un tema claro y oscuro, guardando la preferencia en Local Storage.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Preferencias de Tema<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">claro</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">black</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">oscuro</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#333</span><span class="p">;</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Selecciona un Tema<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;toggleTema&quot;</span><span class="p">&gt;</span>Cambiar Tema<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Estado actual: <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;estadoTema&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">boton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;toggleTema&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">cuerpo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">estadoTema</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;estadoTema&#39;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Cargar tema guardado</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">temaGuardado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;tema&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;claro&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">cuerpo</span><span class="p">.</span><span class="nx">className</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">temaGuardado</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">estadoTema</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">temaGuardado</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Cambiar tema al hacer clic</span>
+<span class="w">    </span><span class="nx">boton</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">nuevoTema</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">cuerpo</span><span class="p">.</span><span class="nx">className</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;claro&#39;</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;oscuro&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;claro&#39;</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">cuerpo</span><span class="p">.</span><span class="nx">className</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nuevoTema</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;tema&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">nuevoTema</span><span class="p">);</span>
+<span class="w">      </span><span class="nx">estadoTema</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nuevoTema</span><span class="p">;</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Explicación</strong>:</p>
+<ul>
+<li>Se verifica si existe un tema guardado en <code>localStorage.getItem('tema')</code>. Si no, se usa 'claro' por defecto.</li>
+<li>Al hacer clic en el botón, se alterna entre los temas <code>claro</code> y <code>oscuro</code>, actualizando <code>localStorage</code> y la interfaz.</li>
+<li>El estado del tema se muestra en un elemento <code>&lt;span&gt;</code> para retroalimentación.</li>
+</ul>
+<hr />
+<h2 id="2-session-storage">2. Session Storage</h2>
+<h3 id="descripcion_1">Descripción</h3>
+<p>Session Storage es similar a Local Storage, pero los datos solo persisten durante la vida de una pestaña del navegador. Cuando la pestaña se cierra, los datos se eliminan. Es útil para datos temporales, como formularios en una sola sesión o estados de navegación.</p>
+<h3 id="metodos-de-la-api_1">Métodos de la API</h3>
+<p>La API de <code>sessionStorage</code> es idéntica a la de <code>localStorage</code>:</p>
+<ul>
+<li><strong><code>setItem(clave, valor)</code></strong></li>
+<li><strong><code>getItem(clave)</code></strong></li>
+<li><strong><code>removeItem(clave)</code></strong></li>
+<li><strong><code>clear()</code></strong></li>
+<li><strong><code>key(indice)</code></strong></li>
+<li><strong>Propiedad <code>length</code></strong></li>
+</ul>
+<h3 id="ejemplo-2-guardar-estado-de-formulario-en-una-sesion">Ejemplo 2: Guardar Estado de Formulario en una Sesión</h3>
+<p>Este ejemplo guarda los datos de un formulario en Session Storage mientras la pestaña está abierta.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Formulario Temporal<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Formulario Temporal<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">form</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;formulario&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Nombre: <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;nombre&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Email: <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;email&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>Enviar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Datos guardados: <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;datosGuardados&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">formulario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;formulario&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">nombreInput</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;nombre&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">emailInput</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">datosGuardados</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;datosGuardados&#39;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Cargar datos guardados</span>
+<span class="w">    </span><span class="nx">nombreInput</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;nombre&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">emailInput</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">actualizarDatosGuardados</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Guardar datos al cambiar</span>
+<span class="w">    </span><span class="nx">nombreInput</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;nombre&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">nombreInput</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+<span class="w">      </span><span class="nx">actualizarDatosGuardados</span><span class="p">();</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="nx">emailInput</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">emailInput</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+<span class="w">      </span><span class="nx">actualizarDatosGuardados</span><span class="p">();</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="w">    </span><span class="c1">// Mostrar datos guardados</span>
+<span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">actualizarDatosGuardados</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">datosGuardados</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`Nombre: </span><span class="si">${</span><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;nombre&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="si">}</span><span class="sb">, Email: </span><span class="si">${</span><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Limpiar al enviar</span>
+<span class="w">    </span><span class="nx">formulario</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;submit&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+<span class="w">      </span><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">(</span><span class="s1">&#39;nombre&#39;</span><span class="p">);</span>
+<span class="w">      </span><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">);</span>
+<span class="w">      </span><span class="nx">formulario</span><span class="p">.</span><span class="nx">reset</span><span class="p">();</span>
+<span class="w">      </span><span class="nx">datosGuardados</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Formulario enviado y datos limpiados&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Explicación</strong>:</p>
+<ul>
+<li>Los datos del formulario se guardan en <code>sessionStorage</code> mientras el usuario escribe.</li>
+<li>Al recargar la página (mientras la pestaña esté abierta), los datos persisten.</li>
+<li>Al enviar el formulario, los datos se eliminan y el formulario se reinicia.</li>
+<li>Un elemento <code>&lt;span&gt;</code> muestra los datos guardados en tiempo real.</li>
+</ul>
+<hr />
+<h2 id="3-cookies">3. Cookies</h2>
+<h3 id="descripcion_2">Descripción</h3>
+<p>Las cookies son pequeños fragmentos de datos almacenados en el navegador y enviados al servidor en cada solicitud HTTP. Son ideales para autenticación, seguimiento de sesiones o personalización, pero tienen una capacidad limitada (~4 KB por cookie) y requieren un manejo más complejo que Local/Session Storage.</p>
+<h3 id="metodos-y-propiedades">Métodos y Propiedades</h3>
+<p>Las cookies se gestionan a través de la propiedad <code>document.cookie</code>. No hay métodos específicos como en Web Storage, sino que se manipulan como una cadena de texto.</p>
+<ul>
+<li><strong>Establecer una cookie</strong>:
+  <div class="highlight"><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;nombre=Alice; expires=Fri, 31 Dec 2025 23:59:59 GMT; path=/&quot;</span><span class="p">;</span>
+</code></pre></div></li>
+<li><strong>Leer cookies</strong>:
+  <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;nombre=Alice; otraClave=valor&quot;</span>
+</code></pre></div></li>
+<li><strong>Eliminar una cookie</strong>: Establece una fecha de expiración en el pasado.
+  <div class="highlight"><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;nombre=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/&quot;</span><span class="p">;</span>
+</code></pre></div></li>
+</ul>
+<h3 id="atributos-de-cookies">Atributos de Cookies</h3>
+<ul>
+<li><code>expires</code>: Fecha de caducidad (en formato UTC).</li>
+<li><code>max-age</code>: Duración en segundos (alternativa a <code>expires</code>).</li>
+<li><code>path</code>: Ruta del sitio donde la cookie es válida (por ejemplo, <code>/</code> para todo el sitio).</li>
+<li><code>domain</code>: Dominio donde la cookie es válida (por ejemplo, <code>example.com</code>).</li>
+<li><code>secure</code>: Solo se envía en conexiones HTTPS.</li>
+<li><code>SameSite</code>: Controla el envío en solicitudes cross-site (<code>Strict</code>, <code>Lax</code>, <code>None</code>).</li>
+</ul>
+<h3 id="ejemplo-3-gestionar-cookies-para-un-contador-de-visitas">Ejemplo 3: Gestionar Cookies para un Contador de Visitas</h3>
+<p>Este ejemplo usa cookies para contar las visitas a una página y permite al usuario restablecer el contador.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Contador de Visitas con Cookies<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Bienvenido<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Has visitado esta página <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;contador&quot;</span><span class="p">&gt;</span>0<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> veces.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;resetear&quot;</span><span class="p">&gt;</span>Restablecer Contador<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">contadorSpan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;contador&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">resetearBoton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;resetear&#39;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Función para obtener una cookie por nombre</span>
+<span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">getCookie</span><span class="p">(</span><span class="nx">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`; </span><span class="si">${</span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">partes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">valor</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="sb">`; </span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">=`</span><span class="p">);</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">partes</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">2</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nx">partes</span><span class="p">.</span><span class="nx">pop</span><span class="p">().</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">).</span><span class="nx">shift</span><span class="p">();</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Función para establecer una cookie</span>
+<span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">setCookie</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">valor</span><span class="p">,</span><span class="w"> </span><span class="nx">dias</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">fecha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">();</span>
+<span class="w">      </span><span class="nx">fecha</span><span class="p">.</span><span class="nx">setTime</span><span class="p">(</span><span class="nx">fecha</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nx">dias</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">24</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">60</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">60</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1000</span><span class="p">));</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">expires</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`expires=</span><span class="si">${</span><span class="nx">fecha</span><span class="p">.</span><span class="nx">toUTCString</span><span class="p">()</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">=</span><span class="si">${</span><span class="nx">valor</span><span class="si">}</span><span class="sb">; </span><span class="si">${</span><span class="nx">expires</span><span class="si">}</span><span class="sb">; path=/`</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Obtener o inicializar contador</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">visitas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">getCookie</span><span class="p">(</span><span class="s1">&#39;visitas&#39;</span><span class="p">))</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">visitas</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">setCookie</span><span class="p">(</span><span class="s1">&#39;visitas&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">visitas</span><span class="p">,</span><span class="w"> </span><span class="mf">365</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">contadorSpan</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">visitas</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Restablecer contador</span>
+<span class="w">    </span><span class="nx">resetearBoton</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;visitas=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/&#39;</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">visitas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">contadorSpan</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">visitas</span><span class="p">;</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Explicación</strong>:</p>
+<ul>
+<li>La función <code>getCookie</code> extrae el valor de una cookie específica parseando <code>document.cookie</code>.</li>
+<li>La función <code>setCookie</code> crea una cookie con una duración configurable (en días).</li>
+<li>Cada vez que se carga la página, el contador de visitas se incrementa y se guarda en una cookie con un año de validez.</li>
+<li>El botón de restablecer elimina la cookie estableciendo una fecha de expiración en el pasado.</li>
+</ul>
+<hr />
+<h2 id="ejemplo-combinado-lista-de-tareas-con-local-storage-session-storage-y-cookies">Ejemplo Combinado: Lista de Tareas con Local Storage, Session Storage y Cookies</h2>
+<p>Este ejemplo avanzado implementa una lista de tareas que usa <strong>Local Storage</strong> para tareas persistentes, <strong>Session Storage</strong> para un filtro temporal y <strong>Cookies</strong> para rastrear el tiempo de la última sesión.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Lista de Tareas Avanzada<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">tarea</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">completada</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">text-decoration</span><span class="p">:</span><span class="w"> </span><span class="kc">line-through</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Lista de Tareas<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Última sesión: <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;ultimaSesion&quot;</span><span class="p">&gt;</span>No registrada<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;nuevaTarea&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Nueva tarea&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;agregar&quot;</span><span class="p">&gt;</span>Agregar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;filtroCompletadas&quot;</span><span class="p">&gt;</span> Mostrar solo completadas<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;listaTareas&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">inputTarea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;nuevaTarea&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">botonAgregar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;agregar&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">listaTareas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;listaTareas&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">filtroCompletadas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;filtroCompletadas&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">ultimaSesion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;ultimaSesion&#39;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Funciones para cookies</span>
+<span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">setCookie</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">valor</span><span class="p">,</span><span class="w"> </span><span class="nx">dias</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">fecha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">();</span>
+<span class="w">      </span><span class="nx">fecha</span><span class="p">.</span><span class="nx">setTime</span><span class="p">(</span><span class="nx">fecha</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nx">dias</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">24</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">60</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">60</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1000</span><span class="p">));</span>
+<span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">=</span><span class="si">${</span><span class="nx">valor</span><span class="si">}</span><span class="sb">; expires=</span><span class="si">${</span><span class="nx">fecha</span><span class="p">.</span><span class="nx">toUTCString</span><span class="p">()</span><span class="si">}</span><span class="sb">; path=/; SameSite=Lax`</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">getCookie</span><span class="p">(</span><span class="nx">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`; </span><span class="si">${</span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">partes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">valor</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="sb">`; </span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">=`</span><span class="p">);</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">partes</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">2</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nx">partes</span><span class="p">.</span><span class="nx">pop</span><span class="p">().</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">).</span><span class="nx">shift</span><span class="p">();</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Guardar última sesión</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">ahora</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">().</span><span class="nx">toLocaleString</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">setCookie</span><span class="p">(</span><span class="s1">&#39;ultimaSesion&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">ahora</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">ultimaSesion</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getCookie</span><span class="p">(</span><span class="s1">&#39;ultimaSesion&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;No registrada&#39;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Cargar tareas desde Local Storage</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">tareas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;tareas&#39;</span><span class="p">))</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">[];</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">mostrarSoloCompletadas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;filtroCompletadas&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;true&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">filtroCompletadas</span><span class="p">.</span><span class="nx">checked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">mostrarSoloCompletadas</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">renderizarTareas</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Agregar tarea</span>
+<span class="w">    </span><span class="nx">botonAgregar</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">inputTarea</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">trim</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">tareas</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span><span class="w"> </span><span class="nx">texto</span><span class="o">:</span><span class="w"> </span><span class="nx">inputTarea</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="nx">completada</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">});</span>
+<span class="w">        </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;tareas&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">tareas</span><span class="p">));</span>
+<span class="w">        </span><span class="nx">inputTarea</span><span class="p">.</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">renderizarTareas</span><span class="p">();</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="w">    </span><span class="c1">// Actualizar filtro</span>
+<span class="w">    </span><span class="nx">filtroCompletadas</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;change&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">mostrarSoloCompletadas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">filtroCompletadas</span><span class="p">.</span><span class="nx">checked</span><span class="p">;</span>
+<span class="w">      </span><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;filtroCompletadas&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">mostrarSoloCompletadas</span><span class="p">);</span>
+<span class="w">      </span><span class="nx">renderizarTareas</span><span class="p">();</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="w">    </span><span class="c1">// Renderizar tareas</span>
+<span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">renderizarTareas</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">listaTareas</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="nx">ithelial</span>
+
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">tareasFiltradas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">mostrarSoloCompletadas</span>
+<span class="w">        </span><span class="o">?</span><span class="w"> </span><span class="nx">tareas</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">tarea</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">tarea</span><span class="p">.</span><span class="nx">completada</span><span class="p">)</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="nx">tareas</span><span class="p">;</span>
+
+<span class="w">      </span><span class="nx">tareasFiltradas</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">tarea</span><span class="p">,</span><span class="w"> </span><span class="nx">indice</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">li</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;li&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">li</span><span class="p">.</span><span class="nx">className</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;tarea&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nx">tarea</span><span class="p">.</span><span class="nx">completada</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39; completada&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">li</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span>
+<span class="sb">          &lt;input type=&quot;checkbox&quot; </span><span class="si">${</span><span class="nx">tarea</span><span class="p">.</span><span class="nx">completada</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;checked&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="si">}</span><span class="sb">&gt;</span>
+<span class="sb">          </span><span class="si">${</span><span class="nx">tarea</span><span class="p">.</span><span class="nx">texto</span><span class="si">}</span>
+<span class="sb">          &lt;button onclick=&quot;eliminarTarea(</span><span class="si">${</span><span class="nx">indice</span><span class="si">}</span><span class="sb">)&quot;&gt;Eliminar&lt;/button&gt;</span>
+<span class="sb">        `</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">listaTareas</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">li</span><span class="p">);</span>
+
+<span class="w">        </span><span class="nx">li</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;change&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">tareas</span><span class="p">[</span><span class="nx">indice</span><span class="p">].</span><span class="nx">completada</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="nx">tareas</span><span class="p">[</span><span class="nx">indice</span><span class="p">].</span><span class="nx">completada</span><span class="p">;</span>
+<span class="w">          </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;tareas&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">tareas</span><span class="p">));</span>
+<span class="w">          </span><span class="nx">renderizarTareas</span><span class="p">();</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">      </span><span class="p">});</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Eliminar tarea</span>
+<span class="w">    </span><span class="nb">window</span><span class="p">.</span><span class="nx">eliminarTarea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">indice</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">tareas</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">indice</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
+<span class="w">      </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;tareas&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">tareas</span><span class="p">));</span>
+<span class="w">      </span><span class="nx">renderizarTareas</span><span class="p">();</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Explicación</strong>:</p>
+<ul>
+<li><strong>Local Storage</strong>: Almacena la lista de tareas de forma persistente.</li>
+<li><strong>Session Storage</strong>: Guarda el estado del filtro de tareas completadas, que se reinicia al cerrar la pestaña.</li>
+<li><strong>Cookies</strong>: Registra la fecha y hora de la última sesión, enviada al servidor si es necesario.</li>
+<li>El filtro permite mostrar solo tareas completadas, actualizando la interfaz dinámicamente.</li>
+<li>La cookie <code>ultimaSesion</code> tiene una validez de 30 días y usa <code>SameSite=Lax</code> para seguridad.</li>
+</ul>
+<hr />
+<h2 id="limitaciones">Limitaciones</h2>
+<h3 id="local-storage">Local Storage</h3>
+<ul>
+<li><strong>Capacidad</strong>: 5-10 MB, dependiendo del navegador.</li>
+<li><strong>Solo texto</strong>: Requiere <code>JSON.stringify</code>/<code>JSON.parse</code> para datos complejos.</li>
+<li><strong>Síncrono</strong>: Puede ralentizar la aplicación con grandes datos.</li>
+<li><strong>Alcance</strong>: Limitado al dominio y protocolo.</li>
+</ul>
+<h3 id="session-storage">Session Storage</h3>
+<ul>
+<li><strong>Temporal</strong>: Los datos se pierden al cerrar la pestaña.</li>
+<li><strong>Capacidad</strong>: Similar a Local Storage (5-10 MB).</li>
+<li><strong>Síncrono</strong>: Igual que Local Storage.</li>
+<li><strong>Alcance</strong>: Limitado a una pestaña específica.</li>
+</ul>
+<h3 id="cookies">Cookies</h3>
+<ul>
+<li><strong>Capacidad</strong>: ~4 KB por cookie, ~50 cookies por dominio.</li>
+<li><strong>Complejidad</strong>: Requiere parsing manual de <code>document.cookie</code>.</li>
+<li><strong>Envío al servidor</strong>: Aumenta el tamaño de las solicitudes HTTP.</li>
+<li><strong>Seguridad</strong>: Vulnerable si no se configuran con <code>Secure</code> y <code>SameSite</code>.</li>
+</ul>
+<hr />
+<h2 id="consideraciones-de-seguridad">Consideraciones de Seguridad</h2>
+<ol>
+<li>
+<p><strong>Datos sensibles</strong>:</p>
+<ul>
+<li><strong>Local/Session Storage</strong>: No guardes datos sensibles (como contraseñas o tokens) sin cifrado, ya que son accesibles vía JavaScript (riesgo de XSS).</li>
+<li><strong>Cookies</strong>: Usa los atributos <code>Secure</code> y <code>HttpOnly</code> para protegerlas de accesos no autorizados.</li>
+<li>Ejemplo de cifrado con <code>crypto-js</code>:
+  <div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">AES</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;crypto-js/aes&#39;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">CryptoJS</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;crypto-js&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">datos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;secreto&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">cifrado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">AES</span><span class="p">.</span><span class="nx">encrypt</span><span class="p">(</span><span class="nx">datos</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;claveSecreta&#39;</span><span class="p">).</span><span class="nx">toString</span><span class="p">();</span>
+<span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;datosCifrados&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">cifrado</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">descifrado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">AES</span><span class="p">.</span><span class="nx">decrypt</span><span class="p">(</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;datosCifrados&#39;</span><span class="p">),</span><span class="w"> </span><span class="s1">&#39;claveSecreta&#39;</span><span class="p">).</span><span class="nx">toString</span><span class="p">(</span><span class="nx">CryptoJS</span><span class="p">.</span><span class="nx">enc</span><span class="p">.</span><span class="nx">Utf8</span><span class="p">);</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Protección contra XSS</strong>:</p>
+<ul>
+<li>Sanitiza entradas del usuario para evitar inyecciones de scripts que accedan a <code>localStorage</code>, <code>sessionStorage</code> o <code>document.cookie</code>.</li>
+<li>Usa bibliotecas como <code>DOMPurify</code> para limpiar HTML.</li>
+</ul>
+</li>
+<li>
+<p><strong>Errores de cuota</strong>:</p>
+<ul>
+<li>Maneja errores de almacenamiento completo con <code>try-catch</code>:
+  <div class="highlight"><pre><span></span><code><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;clave&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;valor&#39;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error de almacenamiento:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">e</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Cookies seguras</strong>:</p>
+<ul>
+<li>Usa <code>Secure</code> para HTTPS y <code>SameSite=Strict</code> o <code>Lax</code> para evitar CSRF (Cross-Site Request Forgery).</li>
+<li>Ejemplo:
+  <div class="highlight"><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;nombre=valor; Secure; SameSite=Strict&quot;</span><span class="p">;</span>
+</code></pre></div></li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="buenas-practicas">Buenas Prácticas</h2>
+<ol>
+<li><strong>Usa nombres claros y prefijos</strong>: Por ejemplo, <code>miApp_tema</code> para evitar colisiones.</li>
+<li><strong>Minimiza datos almacenados</strong>: Guarda solo lo necesario para optimizar el rendimiento.</li>
+<li>
+<p><strong>Valida datos recuperados</strong>:
+   <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">datos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;datos&#39;</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">datos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">objeto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">datos</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">objeto</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error al parsear JSON:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">e</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Limpieza regular</strong>: Elimina datos obsoletos con <code>removeItem</code> o <code>clear</code>.</p>
+</li>
+<li><strong>Pruebas multiplataforma</strong>: Verifica el comportamiento en diferentes navegadores.</li>
+<li><strong>Cookies seguras</strong>:</li>
+<li>Siempre configura <code>path=/</code> para cookies de todo el sitio.</li>
+<li>Usa <code>max-age</code> en lugar de <code>expires</code> para mayor precisión.</li>
+<li><strong>Documentación</strong>: Comenta el propósito de cada clave almacenada.</li>
+</ol>
+<hr />
+<h2 id="casos-de-uso-avanzados">Casos de Uso Avanzados</h2>
+<h3 id="1-sincronizacion-offline">1. Sincronización Offline</h3>
+<p>Guarda datos en Local Storage cuando el usuario está offline y sincronízalos al reconectarse.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">guardarDatosOffline</span><span class="p">(</span><span class="nx">datos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;pendientes&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">datos</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">sincronizarDatos</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">pendientes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;pendientes&#39;</span><span class="p">));</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">pendientes</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">navigator</span><span class="p">.</span><span class="nx">onLine</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;/api/sincronizar&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">pendientes</span><span class="p">),</span>
+<span class="w">        </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">      </span><span class="p">});</span>
+<span class="w">      </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">(</span><span class="s1">&#39;pendientes&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error de sincronización:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">e</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;online&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">sincronizarDatos</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="2-cache-de-recursos">2. Cache de Recursos</h3>
+<p>Usa Local Storage para almacenar respuestas de API y reducir solicitudes.</p>
+<div class="highlight"><pre><span></span><code><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">obtenerDatosConCache</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">cache</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">cache</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">cache</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">respuesta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">datos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">respuesta</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">datos</span><span class="p">));</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">datos</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="3-gestion-de-sesiones-con-cookies">3. Gestión de Sesiones con Cookies</h3>
+<p>Usa cookies para gestionar sesiones de usuario.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">iniciarSesion</span><span class="p">(</span><span class="nx">token</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">setCookie</span><span class="p">(</span><span class="s1">&#39;sessionToken&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">token</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// 1 día</span>
+<span class="p">}</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">cerrarSesion</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">cookie</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;sessionToken=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">estaLogueado</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="o">!!</span><span class="nx">getCookie</span><span class="p">(</span><span class="s1">&#39;sessionToken&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025 &copy; by JFVG
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs.sticky", "navigation.tabs", "navigation.top", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
